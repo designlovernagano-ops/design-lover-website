@@ -1,198 +1,307 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Design Lover — 思いをカタチに</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
-<body>
+<body class="is-loading">
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <a href="#" class="nav__logo"><img src="logo-mark-t.png" alt="Design Lover" class="nav__logo-mark"><img src="logo-text-t.png" alt="Design Lover" class="nav__logo-text"></a>
-    <div class="nav__links" id="navLinks">
-      <a href="#work">サービス</a>
-      <a href="#about">について</a>
-      <a href="#pricing">料金</a>
-      <a href="#contact">連絡</a>
-    </div>
-    <button class="nav__burger" id="burger" aria-label="メニュー">
-      <span></span><span></span>
-    </button>
-  </nav>
+<!-- ============================================================
+     PRELOADER
+     ============================================================ -->
+<div class="loader" id="loader">
+  <div class="loader__frame">
+    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="loader__rect" x="1" y="1" width="118" height="118" stroke="#B8976A" stroke-width="0.6"/>
+      <circle class="loader__circle" cx="60" cy="60" r="28" stroke="rgba(247,245,240,0.25)" stroke-width="0.6"/>
+      <line x1="60" y1="32" x2="60" y2="88" stroke="rgba(247,245,240,0.12)" stroke-width="0.4" stroke-dasharray="3,4"/>
+      <line x1="32" y1="60" x2="88" y2="60" stroke="rgba(247,245,240,0.12)" stroke-width="0.4" stroke-dasharray="3,4"/>
+      <circle class="loader__dot" cx="60" cy="60" r="3" fill="#B8976A"/>
+    </svg>
+  </div>
+  <p class="loader__label">Design Lover</p>
+  <div class="loader__bar-wrap"><div class="loader__bar"></div></div>
+</div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__grid" aria-hidden="true">
-      <svg class="hero__svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <!-- 縦線 -->
-        <line x1="100" y1="0" x2="100" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="200" y1="0" x2="200" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="300" y1="0" x2="300" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="400" y1="0" x2="400" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="500" y1="0" x2="500" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="600" y1="0" x2="600" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="700" y1="0" x2="700" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="800" y1="0" x2="800" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="900" y1="0" x2="900" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="1000" y1="0" x2="1000" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="1100" y1="0" x2="1100" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <!-- 横線 -->
-        <line x1="0" y1="100" x2="1200" y2="100" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="0" y1="200" x2="1200" y2="200" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="0" y1="300" x2="1200" y2="300" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="0" y1="400" x2="1200" y2="400" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="0" y1="500" x2="1200" y2="500" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <line x1="0" y1="600" x2="1200" y2="600" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
-        <!-- 斜め寸法線 -->
-        <line x1="60" y1="40" x2="340" y2="40" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
-        <line x1="60" y1="37" x2="60" y2="43" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
-        <line x1="340" y1="37" x2="340" y2="43" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
-        <line x1="860" y1="640" x2="1140" y2="640" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
-        <line x1="860" y1="637" x2="860" y2="643" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
-        <line x1="1140" y1="637" x2="1140" y2="643" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
-        <!-- 交点マーク -->
-        <circle cx="100" cy="100" r="2" fill="#B8976A" opacity="0.35"/>
-        <circle cx="300" cy="300" r="2" fill="#B8976A" opacity="0.35"/>
-        <circle cx="900" cy="400" r="2" fill="#B8976A" opacity="0.35"/>
-        <circle cx="1100" cy="200" r="2" fill="#B8976A" opacity="0.35"/>
-        <!-- 注釈テキスト -->
-        <text x="66" y="35" font-family="DM Sans" font-size="8" fill="#B8976A" opacity="0.55" letter-spacing="1">280mm</text>
-        <text x="866" y="635" font-family="DM Sans" font-size="8" fill="#B8976A" opacity="0.55" letter-spacing="1">280mm</text>
-      </svg>
-    </div>
-    <div class="hero__content">
-      <div class="hero__logo-wrap"><img src="logo-mark-t.png" alt="DL" class="hero__logo-mark"></div>
-    <p class="hero__label">Design Lover — 個人設計事務所</p>
-      <h1 class="hero__title">
-        思いを、<br>
-        <em>カタチに。</em>
-      </h1>
+<!-- CURSOR -->
+<div class="cur-dot" id="curDot"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-track" id="scrollTrack"></div>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav__logo">
+    <img src="logo-mark-t.png" alt="Design Lover" class="nav__logo-mark">
+    <img src="logo-text-t.png" alt="Design Lover" class="nav__logo-text">
+  </a>
+  <div class="nav__links" id="navLinks">
+    <a href="#work">サービス</a>
+    <a href="#about">について</a>
+    <a href="#pricing">料金</a>
+    <a href="#contact" class="nav__cta">連絡</a>
+  </div>
+  <button class="nav__burger" id="burger" aria-label="メニュー">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="hero">
+  <!-- Animated engineering grid -->
+  <div class="hero__bg" aria-hidden="true">
+    <svg class="hero__grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <!-- Vertical grid lines -->
+      <line class="g-line" x1="120" y1="0" x2="120" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="240" y1="0" x2="240" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="360" y1="0" x2="360" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="480" y1="0" x2="480" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="600" y1="0" x2="600" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="720" y1="0" x2="720" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="840" y1="0" x2="840" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="960" y1="0" x2="960" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="1080" y1="0" x2="1080" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="1200" y1="0" x2="1200" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="1320" y1="0" x2="1320" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
+      <!-- Horizontal grid lines -->
+      <line class="g-line" x1="0" y1="150" x2="1440" y2="150" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="300" x2="1440" y2="300" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="450" x2="1440" y2="450" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="600" x2="1440" y2="600" stroke="#1C1C1C" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="750" x2="1440" y2="750" stroke="#1C1C1C" stroke-width="0.4"/>
+      <!-- Gold dimension annotations -->
+      <line class="g-accent" x1="80" y1="64" x2="380" y2="64" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
+      <line class="g-accent" x1="80" y1="60" x2="80" y2="68" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
+      <line class="g-accent" x1="380" y1="60" x2="380" y2="68" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
+      <text class="g-label" x="86" y="57" font-family="DM Sans" font-size="8" fill="#B8976A" opacity="0" letter-spacing="1.5">280.0mm</text>
+      <!-- Target circle bottom-right -->
+      <circle class="g-circle" cx="1200" cy="600" r="80" stroke="#B8976A" stroke-width="0.5" fill="none" opacity="0"/>
+      <circle class="g-circle" cx="1200" cy="600" r="40" stroke="#1C1C1C" stroke-width="0.4" fill="none" opacity="0"/>
+      <line class="g-cross" x1="1200" y1="520" x2="1200" y2="680" stroke="#1C1C1C" stroke-width="0.3" stroke-dasharray="3,4" opacity="0"/>
+      <line class="g-cross" x1="1120" y1="600" x2="1280" y2="600" stroke="#1C1C1C" stroke-width="0.3" stroke-dasharray="3,4" opacity="0"/>
+      <circle class="g-centerdot" cx="1200" cy="600" r="3" fill="#B8976A" opacity="0"/>
+      <!-- Coordinates -->
+      <text class="g-coord" x="1310" y="28" font-family="DM Sans" font-size="9" fill="#B8976A" opacity="0" letter-spacing="1">35.658°N</text>
+      <text class="g-coord" x="1310" y="44" font-family="DM Sans" font-size="9" fill="#B8976A" opacity="0" letter-spacing="1">137.900°E</text>
+    </svg>
+  </div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow" id="heroEyebrow" aria-label="Design Lover — 個人設計事務所"></p>
+    <h1 class="hero__title">
+      <span class="hero__line"><span class="hero__word">思いを<span class="hero__comma">、</span></span></span>
+      <span class="hero__line"><em class="hero__word hero__em">カタチに。</em></span>
+    </h1>
+    <div class="hero__sub-wrap">
       <p class="hero__sub">治具設計から3Dプリンター造形まで。<br>あなたのアイデアに、精度を与える。</p>
-      <a href="#contact" class="hero__cta">相談する <span aria-hidden="true">→</span></a>
     </div>
-    <div class="hero__meta" aria-hidden="true">
-      <span>35.658°N</span>
-      <span>137.900°E</span>
-      <span>Nagano, JP</span>
-    </div>
-  </section>
-
-  <!-- TICKER -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__inner">
-      <span>治具・装置設計</span><span class="ticker__dot">·</span>
-      <span>3Dプリンター造形</span><span class="ticker__dot">·</span>
-      <span>CADオペレーティング</span><span class="ticker__dot">·</span>
-      <span>設計リソース支援</span><span class="ticker__dot">·</span>
-      <span>試作・少量生産</span><span class="ticker__dot">·</span>
-      <span>治具・装置設計</span><span class="ticker__dot">·</span>
-      <span>3Dプリンター造形</span><span class="ticker__dot">·</span>
-      <span>CADオペレーティング</span><span class="ticker__dot">·</span>
-      <span>設計リソース支援</span><span class="ticker__dot">·</span>
-      <span>試作・少量生産</span><span class="ticker__dot">·</span>
+    <div class="hero__actions">
+      <a href="#contact" class="btn btn--primary" data-magnetic>
+        <span>相談する</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#work" class="btn btn--ghost" data-magnetic>
+        <span>サービスを見る</span>
+      </a>
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about__inner">
-      <div class="about__left">
-        <p class="label">About</p>
-        <div class="about__diagram" aria-hidden="true">
-          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="218" height="218" stroke="#B8976A" stroke-width="0.6" opacity="0.4"/>
-            <line x1="1" y1="73" x2="219" y2="73" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2"/>
-            <line x1="1" y1="147" x2="219" y2="147" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2"/>
-            <line x1="73" y1="1" x2="73" y2="219" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2"/>
-            <line x1="147" y1="1" x2="147" y2="219" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2"/>
-            <!-- 中心のオブジェクト -->
-            <circle cx="110" cy="110" r="48" stroke="#1C1C1C" stroke-width="0.8" opacity="0.5" fill="none"/>
-            <circle cx="110" cy="110" r="32" stroke="#B8976A" stroke-width="0.8" opacity="0.6" fill="none"/>
-            <circle cx="110" cy="110" r="4" fill="#B8976A" opacity="0.8"/>
-            <!-- 十字線 -->
-            <line x1="110" y1="58" x2="110" y2="162" stroke="#1C1C1C" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3"/>
-            <line x1="58" y1="110" x2="162" y2="110" stroke="#1C1C1C" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3"/>
-            <!-- 寸法線 -->
-            <line x1="20" y1="62" x2="20" y2="158" stroke="#B8976A" stroke-width="0.5" opacity="0.5"/>
-            <line x1="17" y1="62" x2="23" y2="62" stroke="#B8976A" stroke-width="0.5" opacity="0.5"/>
-            <line x1="17" y1="158" x2="23" y2="158" stroke="#B8976A" stroke-width="0.5" opacity="0.5"/>
-            <text x="8" y="114" font-family="DM Sans" font-size="7" fill="#B8976A" opacity="0.7" transform="rotate(-90,8,114)">Ø96mm</text>
-          </svg>
-        </div>
-      </div>
-      <div class="about__right">
-        <h2 class="about__title">設計とは、<br>問いに答えを<br>刻む仕事だ。</h2>
-        <p class="about__body">Design Lover は、長野を拠点とする個人設計事務所です。治具・専用装置の設計、3Dプリンターによる試作造形、CAD代行業務を通じて、中小企業の「設計リソース不足」と個人の「アイデアをカタチにしたい」という両方の需要に応えます。</p>
-        <p class="about__body">大きな組織より小さく動ける。だからこそ、あなたの課題に直接向き合えます。</p>
-        <div class="about__stats">
-          <div class="about__stat">
-            <span class="about__stat-num">50+</span>
-            <span class="about__stat-label">対応実績</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-num">5yr</span>
-            <span class="about__stat-label">設計経験</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-num">3day</span>
-            <span class="about__stat-label">最短納期</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="hero__meta" aria-hidden="true">
+    <span class="hero__meta-item">35.658°N</span>
+    <span class="hero__meta-sep">·</span>
+    <span class="hero__meta-item">137.900°E</span>
+    <span class="hero__meta-sep">·</span>
+    <span class="hero__meta-item">Nagano, JP</span>
+  </div>
 
-  <!-- WORK / SERVICES -->
-  <section class="work" id="work">
-    <div class="work__header">
-      <p class="label">Services</p>
-      <h2 class="work__title">できること</h2>
+  <div class="hero__scroll-hint" aria-hidden="true">
+    <div class="hero__scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <div class="ticker__inner">
+      <span>治具・装置設計</span><span class="ticker__sep">—</span>
+      <span>3Dプリンター造形</span><span class="ticker__sep">—</span>
+      <span>CADオペレーティング</span><span class="ticker__sep">—</span>
+      <span>設計リソース支援</span><span class="ticker__sep">—</span>
+      <span>試作・少量生産</span><span class="ticker__sep">—</span>
+      <span>SolidWorks</span><span class="ticker__sep">—</span>
+      <span>AutoCAD</span><span class="ticker__sep">—</span>
+      <span>Fusion 360</span><span class="ticker__sep">—</span>
+      <span>治具・装置設計</span><span class="ticker__sep">—</span>
+      <span>3Dプリンター造形</span><span class="ticker__sep">—</span>
+      <span>CADオペレーティング</span><span class="ticker__sep">—</span>
+      <span>設計リソース支援</span><span class="ticker__sep">—</span>
+      <span>試作・少量生産</span><span class="ticker__sep">—</span>
+      <span>SolidWorks</span><span class="ticker__sep">—</span>
+      <span>AutoCAD</span><span class="ticker__sep">—</span>
+      <span>Fusion 360</span><span class="ticker__sep">—</span>
     </div>
-    <div class="work__list">
-      <div class="work__item">
-        <div class="work__item-top">
-          <span class="work__num">01</span>
-          <span class="work__tag">Jig & Device</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="about section" id="about">
+  <div class="about__inner container">
+    <div class="about__left">
+      <p class="eyebrow reveal-up">About</p>
+      <div class="about__diagram reveal-up" aria-hidden="true">
+        <svg class="about-svg" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="asvg-rect" x="1" y="1" width="258" height="258" stroke="#B8976A" stroke-width="0.6" opacity="0.3"/>
+          <line class="asvg-line" x1="1" y1="87" x2="259" y2="87" stroke="#1C1C1C" stroke-width="0.3" opacity="0.15"/>
+          <line class="asvg-line" x1="1" y1="173" x2="259" y2="173" stroke="#1C1C1C" stroke-width="0.3" opacity="0.15"/>
+          <line class="asvg-line" x1="87" y1="1" x2="87" y2="259" stroke="#1C1C1C" stroke-width="0.3" opacity="0.15"/>
+          <line class="asvg-line" x1="173" y1="1" x2="173" y2="259" stroke="#1C1C1C" stroke-width="0.3" opacity="0.15"/>
+          <circle class="asvg-circle" cx="130" cy="130" r="70" stroke="#1C1C1C" stroke-width="0.8" opacity="0.35" fill="none"/>
+          <circle class="asvg-circle asvg-circle--gold" cx="130" cy="130" r="48" stroke="#B8976A" stroke-width="0.8" opacity="0.5" fill="none"/>
+          <line class="asvg-cross" x1="130" y1="60" x2="130" y2="200" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2" stroke-dasharray="3,4"/>
+          <line class="asvg-cross" x1="60" y1="130" x2="200" y2="130" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2" stroke-dasharray="3,4"/>
+          <line class="asvg-dim" x1="22" y1="82" x2="22" y2="178" stroke="#B8976A" stroke-width="0.5" opacity="0.45"/>
+          <line class="asvg-dim" x1="19" y1="82" x2="25" y2="82" stroke="#B8976A" stroke-width="0.5" opacity="0.45"/>
+          <line class="asvg-dim" x1="19" y1="178" x2="25" y2="178" stroke="#B8976A" stroke-width="0.5" opacity="0.45"/>
+          <text class="asvg-label" x="10" y="134" font-family="DM Sans" font-size="7.5" fill="#B8976A" opacity="0" transform="rotate(-90,10,134)" letter-spacing="1">Ø96mm</text>
+          <circle cx="130" cy="130" r="3.5" fill="#B8976A" class="asvg-dot" opacity="0"/>
+          <polyline points="1,30 1,1 30,1" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.4"/>
+          <polyline points="229,1 259,1 259,30" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.4"/>
+          <polyline points="259,229 259,259 229,259" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.4"/>
+          <polyline points="30,259 1,259 1,229" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+    <div class="about__right">
+      <h2 class="about__title reveal-up">設計とは、<br>問いに答えを<br>刻む仕事だ。</h2>
+      <p class="about__body reveal-up">Design Lover は、長野を拠点とする個人設計事務所です。治具・専用装置の設計、3Dプリンターによる試作造形、CAD代行業務を通じて、中小企業の「設計リソース不足」と個人の「アイデアをカタチにしたい」という両方の需要に応えます。</p>
+      <p class="about__body reveal-up">大きな組織より小さく動ける。だからこそ、あなたの課題に直接向き合えます。</p>
+      <div class="about__stats reveal-up">
+        <div class="about__stat">
+          <span class="about__stat-num" data-counter="50" data-suffix="+">0</span>
+          <span class="about__stat-label">対応実績</span>
         </div>
+        <div class="about__stat">
+          <span class="about__stat-num" data-counter="5" data-suffix="yr">0</span>
+          <span class="about__stat-label">設計経験</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-num" data-counter="3" data-suffix="day">0</span>
+          <span class="about__stat-label">最短納期</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section class="work section" id="work">
+  <div class="work__header container reveal-up">
+    <p class="eyebrow">Services</p>
+    <h2 class="section-title">できること</h2>
+  </div>
+  <div class="work__list container">
+
+    <div class="work__item reveal-up">
+      <div class="work__item-meta">
+        <span class="work__num">01</span>
+        <span class="work__tag">Jig & Device</span>
+      </div>
+      <div class="work__item-content">
         <h3 class="work__item-title">治具・装置設計</h3>
         <p class="work__item-body">検査治具、組立治具、省力化装置など。製造ラインの課題を構造から解決します。要件定義からCAD図面・3Dモデルまで一気通貫。</p>
-        <div class="work__line" aria-hidden="true"></div>
+        <a href="#contact" class="work__link">詳しく相談 <span>→</span></a>
       </div>
-      <div class="work__item">
-        <div class="work__item-top">
-          <span class="work__num">02</span>
-          <span class="work__tag">3D Print</span>
-        </div>
-        <h3 class="work__item-title">3Dプリンター造形</h3>
-        <p class="work__item-body">スケッチや仕様書から3Dデータを起こし、試作品をお届けします。最短3日。アイデアを手で触れる形に。</p>
-        <div class="work__line" aria-hidden="true"></div>
-      </div>
-      <div class="work__item">
-        <div class="work__item-top">
-          <span class="work__num">03</span>
-          <span class="work__tag">CAD Operation</span>
-        </div>
-        <h3 class="work__item-title">CADオペレーティング</h3>
-        <p class="work__item-body">SolidWorks・AutoCAD・Fusion 360 対応。手書き図面のCAD化、既存データの修正・整備、フォーマット変換など。</p>
-        <div class="work__line" aria-hidden="true"></div>
+      <div class="work__item-icon" aria-hidden="true">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="80">
+          <rect x="10" y="30" width="60" height="28" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <rect x="20" y="20" width="11" height="11" stroke="#1C1C1C" stroke-width="0.6" fill="none" opacity="0.4"/>
+          <rect x="49" y="20" width="11" height="11" stroke="#1C1C1C" stroke-width="0.6" fill="none" opacity="0.4"/>
+          <line x1="10" y1="44" x2="70" y2="44" stroke="#B8976A" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3"/>
+          <circle cx="40" cy="44" r="5" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.6"/>
+          <line x1="40" y1="8" x2="40" y2="20" stroke="#B8976A" stroke-width="0.4" opacity="0.25" stroke-dasharray="2,2"/>
+          <line x1="40" y1="58" x2="40" y2="70" stroke="#B8976A" stroke-width="0.4" opacity="0.25" stroke-dasharray="2,2"/>
+        </svg>
       </div>
     </div>
-  </section>
 
-  <!-- PRICING -->
-  <section class="pricing" id="pricing">
-    <div class="pricing__inner">
-      <div class="pricing__header">
-        <p class="label">Pricing</p>
-        <h2 class="pricing__title">料金</h2>
-        <p class="pricing__note-top">見積もり・相談は無料。まず話しましょう。</p>
+    <div class="work__item reveal-up">
+      <div class="work__item-meta">
+        <span class="work__num">02</span>
+        <span class="work__tag">3D Print</span>
       </div>
-      <div class="pricing__cards">
-        <div class="pricing__card">
+      <div class="work__item-content">
+        <h3 class="work__item-title">3Dプリンター造形</h3>
+        <p class="work__item-body">スケッチや仕様書から3Dデータを起こし、試作品をお届けします。最短3日。アイデアを手で触れる形に。</p>
+        <a href="#contact" class="work__link">詳しく相談 <span>→</span></a>
+      </div>
+      <div class="work__item-icon" aria-hidden="true">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="80">
+          <polygon points="40,10 68,54 12,54" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <polygon points="40,20 60,50 20,50" stroke="#1C1C1C" stroke-width="0.4" fill="none" opacity="0.2"/>
+          <line x1="40" y1="10" x2="40" y2="64" stroke="#B8976A" stroke-width="0.4" opacity="0.3" stroke-dasharray="3,3"/>
+          <line x1="12" y1="54" x2="68" y2="54" stroke="#B8976A" stroke-width="0.8" opacity="0.45"/>
+          <circle cx="40" cy="54" r="2.5" fill="#B8976A" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="work__item reveal-up">
+      <div class="work__item-meta">
+        <span class="work__num">03</span>
+        <span class="work__tag">CAD Operation</span>
+      </div>
+      <div class="work__item-content">
+        <h3 class="work__item-title">CADオペレーティング</h3>
+        <p class="work__item-body">SolidWorks・AutoCAD・Fusion 360 対応。手書き図面のCAD化、既存データの修正・整備、フォーマット変換など。</p>
+        <a href="#contact" class="work__link">詳しく相談 <span>→</span></a>
+      </div>
+      <div class="work__item-icon" aria-hidden="true">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="80">
+          <rect x="8" y="14" width="64" height="48" rx="1" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <line x1="8" y1="25" x2="72" y2="25" stroke="#B8976A" stroke-width="0.5" opacity="0.3"/>
+          <line x1="20" y1="36" x2="56" y2="36" stroke="#1C1C1C" stroke-width="0.5" opacity="0.3"/>
+          <line x1="20" y1="44" x2="46" y2="44" stroke="#1C1C1C" stroke-width="0.5" opacity="0.3"/>
+          <line x1="20" y1="52" x2="52" y2="52" stroke="#1C1C1C" stroke-width="0.5" opacity="0.3"/>
+          <circle cx="14" cy="19" r="2" fill="#B8976A" opacity="0.5"/>
+          <circle cx="22" cy="19" r="2" fill="#B8976A" opacity="0.25"/>
+          <circle cx="30" cy="19" r="2" fill="#B8976A" opacity="0.15"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICING
+     ============================================================ -->
+<section class="pricing section" id="pricing">
+  <div class="pricing__inner container">
+    <div class="pricing__header">
+      <p class="eyebrow reveal-up">Pricing</p>
+      <h2 class="section-title pricing__title reveal-up">料金</h2>
+      <p class="pricing__note-top reveal-up">見積もり・相談は無料。まず話しましょう。</p>
+    </div>
+    <div class="pricing__grid">
+
+      <div class="pricing__card reveal-up" data-tilt>
+        <div class="pricing__card-bg"></div>
+        <div class="pricing__card-content">
           <div class="pricing__card-head">
             <p class="pricing__plan">Spot</p>
             <p class="pricing__price">¥5,000<span>/h〜</span></p>
@@ -206,7 +315,12 @@
           </ul>
           <a href="#contact" class="pricing__btn">相談する</a>
         </div>
-        <div class="pricing__card pricing__card--gold">
+      </div>
+
+      <div class="pricing__card pricing__card--featured reveal-up" data-tilt>
+        <div class="pricing__card-bg"></div>
+        <div class="pricing__card-content">
+          <div class="pricing__badge">おすすめ</div>
           <div class="pricing__card-head">
             <p class="pricing__plan">Project</p>
             <p class="pricing__price">見積もり</p>
@@ -218,9 +332,13 @@
             <li>CADデータ作成</li>
             <li>修正2回まで込み</li>
           </ul>
-          <a href="#contact" class="pricing__btn pricing__btn--dark">見積もりを依頼</a>
+          <a href="#contact" class="pricing__btn pricing__btn--featured">見積もりを依頼</a>
         </div>
-        <div class="pricing__card">
+      </div>
+
+      <div class="pricing__card reveal-up" data-tilt>
+        <div class="pricing__card-bg"></div>
+        <div class="pricing__card-content">
           <div class="pricing__card-head">
             <p class="pricing__plan">Retainer</p>
             <p class="pricing__price">¥30,000<span>/月〜</span></p>
@@ -235,129 +353,338 @@
           <a href="#contact" class="pricing__btn">問い合わせる</a>
         </div>
       </div>
-      <p class="pricing__note-bottom">※ 価格は税抜き表示。内容により変動します。</p>
-    </div>
-  </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testi">
-    <div class="testi__inner">
-      <p class="label">Voices</p>
-      <h2 class="testi__title">お客様の声</h2>
-      <div class="testi__grid">
-        <div class="testi__card">
-          <p class="testi__text">「設計者の退職直後に依頼しました。品質が高く、工場からも太鼓判。頼れる外部の設計者ができた感覚です。」</p>
-          <footer class="testi__footer">
-            <span class="testi__name">M.T.</span>
-            <span class="testi__role">製造業・30名</span>
-          </footer>
+    </div>
+    <p class="pricing__note-bottom">※ 価格は税抜き表示。内容により変動します。</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="testi section" id="voices">
+  <div class="testi__inner container">
+    <p class="eyebrow reveal-up">Voices</p>
+    <h2 class="section-title testi__title reveal-up">お客様の声</h2>
+    <div class="testi__grid">
+      <div class="testi__card reveal-up">
+        <div class="testi__quote" aria-hidden="true">"</div>
+        <p class="testi__text">設計者の退職直後に依頼しました。品質が高く、工場からも太鼓判。頼れる外部の設計者ができた感覚です。</p>
+        <footer class="testi__footer">
+          <div class="testi__avatar" aria-hidden="true">M</div>
+          <div>
+            <p class="testi__name">M.T.</p>
+            <p class="testi__role">製造業・30名</p>
+          </div>
+        </footer>
+      </div>
+      <div class="testi__card reveal-up">
+        <div class="testi__quote" aria-hidden="true">"</div>
+        <p class="testi__text">スケッチを送ったら3日で試作品が届いた。思っていたより遥かに精度が高くて驚いた。</p>
+        <footer class="testi__footer">
+          <div class="testi__avatar" aria-hidden="true">K</div>
+          <div>
+            <p class="testi__name">K.S.</p>
+            <p class="testi__role">個人・DIYクリエイター</p>
+          </div>
+        </footer>
+      </div>
+      <div class="testi__card reveal-up">
+        <div class="testi__quote" aria-hidden="true">"</div>
+        <p class="testi__text">古い図面の整備とデータ変換をまとめて依頼。専門的な内容でも確認を挟みながら丁寧に進めてもらえた。</p>
+        <footer class="testi__footer">
+          <div class="testi__avatar" aria-hidden="true">A</div>
+          <div>
+            <p class="testi__name">A.N.</p>
+            <p class="testi__role">機械部品メーカー・15名</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section class="contact section" id="contact">
+  <div class="contact__inner container">
+    <div class="contact__left">
+      <p class="eyebrow reveal-up">Contact</p>
+      <h2 class="contact__title reveal-up">話し<em>ましょう。</em></h2>
+      <p class="contact__body reveal-up">まずは気軽に。どんな小さな相談でも歓迎します。見積もりは無料です。</p>
+      <div class="contact__meta reveal-up">
+        <div class="contact__meta-item">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#B8976A" stroke-width="0.8"/><circle cx="7" cy="7" r="2" fill="#B8976A" opacity="0.6"/></svg>
+          <span>Nagano, Japan</span>
         </div>
-        <div class="testi__card">
-          <p class="testi__text">「スケッチを送ったら3日で試作品が届いた。思っていたより遥かに精度が高くて驚いた。」</p>
-          <footer class="testi__footer">
-            <span class="testi__name">K.S.</span>
-            <span class="testi__role">個人・DIYクリエイター</span>
-          </footer>
-        </div>
-        <div class="testi__card">
-          <p class="testi__text">「古い図面の整備とデータ変換をまとめて依頼。専門的な内容でも確認を挟みながら丁寧に進めてもらえた。」</p>
-          <footer class="testi__footer">
-            <span class="testi__name">A.N.</span>
-            <span class="testi__role">機械部品メーカー・15名</span>
-          </footer>
+        <div class="contact__meta-item">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 3h12v8H1z" stroke="#B8976A" stroke-width="0.8"/><path d="M1 3l6 5 6-5" stroke="#B8976A" stroke-width="0.8"/></svg>
+          <span>返信まで通常24h以内</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact__inner">
-      <div class="contact__left">
-        <p class="label">Contact</p>
-        <h2 class="contact__title">話し<em>ましょう。</em></h2>
-        <p class="contact__body">まずは気軽に。どんな小さな相談でも歓迎します。見積もりは無料です。</p>
-        <div class="contact__detail">
-          <p>Nagano, Japan</p>
-          <p>返信まで通常24h以内</p>
-        </div>
+    <form class="contact__form reveal-up" id="contactForm" novalidate>
+      <div class="field">
+        <label class="field__label" for="c-name">名前 <span>*</span></label>
+        <input class="field__input" type="text" id="c-name" placeholder="山田 太郎" required/>
       </div>
-      <form class="contact__form" onsubmit="return false;">
-        <div class="field">
-          <label class="field__label" for="c-name">名前 <span>*</span></label>
-          <input class="field__input" type="text" id="c-name" placeholder="山田 太郎" />
-        </div>
-        <div class="field">
-          <label class="field__label" for="c-company">会社名・屋号</label>
-          <input class="field__input" type="text" id="c-company" placeholder="任意" />
-        </div>
-        <div class="field">
-          <label class="field__label" for="c-email">メール <span>*</span></label>
-          <input class="field__input" type="email" id="c-email" placeholder="your@email.com" />
-        </div>
-        <div class="field">
-          <label class="field__label" for="c-type">相談の種類 <span>*</span></label>
-          <select class="field__input field__select" id="c-type">
-            <option value="" disabled selected>選択してください</option>
-            <option>治具・装置設計</option>
-            <option>3Dプリンター造形</option>
-            <option>CADオペレーティング</option>
-            <option>継続サポート</option>
-            <option>その他</option>
-          </select>
-        </div>
-        <div class="field">
-          <label class="field__label" for="c-msg">メッセージ <span>*</span></label>
-          <textarea class="field__input field__textarea" id="c-msg" placeholder="どんな些細なことでもどうぞ。"></textarea>
-        </div>
-        <button type="submit" class="contact__submit">送信する →</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__left">
-        <div class="footer__logo"><img src="logo-mark-t.png" alt="DL" class="footer__logo-mark"><img src="logo-text-t.png" alt="Design Lover" class="footer__logo-text"></div>
-        <p class="footer__copy">© 2025 Design Lover. All rights reserved.</p>
+      <div class="field">
+        <label class="field__label" for="c-company">会社名・屋号</label>
+        <input class="field__input" type="text" id="c-company" placeholder="任意"/>
       </div>
-      <nav class="footer__nav">
-        <a href="#work">サービス</a>
-        <a href="#about">について</a>
-        <a href="#pricing">料金</a>
-        <a href="#contact">連絡</a>
-      </nav>
-    </div>
-  </footer>
+      <div class="field">
+        <label class="field__label" for="c-email">メール <span>*</span></label>
+        <input class="field__input" type="email" id="c-email" placeholder="your@email.com" required/>
+      </div>
+      <div class="field">
+        <label class="field__label" for="c-type">相談の種類 <span>*</span></label>
+        <select class="field__input field__select" id="c-type" required>
+          <option value="" disabled selected>選択してください</option>
+          <option>治具・装置設計</option>
+          <option>3Dプリンター造形</option>
+          <option>CADオペレーティング</option>
+          <option>継続サポート</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="c-msg">メッセージ <span>*</span></label>
+        <textarea class="field__input field__textarea" id="c-msg" placeholder="どんな些細なことでもどうぞ。" required></textarea>
+      </div>
+      <button type="submit" class="contact__submit" data-magnetic>
+        <span class="submit__text">送信する</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
+</section>
 
-  <script>
-    // ナビ スクロール
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <div class="footer__logo">
+        <img src="logo-mark-t.png" alt="DL" class="footer__logo-mark">
+        <img src="logo-text-t.png" alt="Design Lover" class="footer__logo-text">
+      </div>
+      <p class="footer__tagline">思いを、カタチに。</p>
+      <p class="footer__copy">© 2025 Design Lover. All rights reserved.</p>
+    </div>
+    <nav class="footer__nav" aria-label="フッターナビ">
+      <a href="#work">サービス</a>
+      <a href="#about">について</a>
+      <a href="#pricing">料金</a>
+      <a href="#contact">連絡</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── Preloader ── */
+  const loader = document.getElementById('loader');
+  function hideLoader() {
+    loader.classList.add('done');
+    document.body.classList.remove('is-loading');
+    // trigger hero animations
+    setTimeout(() => {
+      const hero = document.getElementById('hero');
+      hero.classList.add('animated');
+    }, 200);
+  }
+  // Hide after font + minimum time
+  const MIN_LOAD = 1600;
+  const t0 = Date.now();
+  if (document.fonts) {
+    document.fonts.ready.then(() => {
+      const elapsed = Date.now() - t0;
+      setTimeout(hideLoader, Math.max(0, MIN_LOAD - elapsed));
     });
-    // バーガー
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('navLinks');
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('nav__links--open');
-      burger.classList.toggle('nav__burger--open');
+  } else {
+    setTimeout(hideLoader, MIN_LOAD);
+  }
+
+  /* ── Eyebrow character reveal ── */
+  const eyebrowEl = document.getElementById('heroEyebrow');
+  const eyebrowText = 'Design Lover — 個人設計事務所';
+  eyebrowText.split('').forEach((ch, i) => {
+    const s = document.createElement('span');
+    s.className = 'reveal-char';
+    s.style.transitionDelay = (0.05 * i + 0.3) + 's';
+    s.textContent = ch === ' ' ? ' ' : ch;
+    eyebrowEl.appendChild(s);
+  });
+
+  /* ── Custom Cursor ── */
+  const curDot = document.getElementById('curDot');
+  const curRing = document.getElementById('curRing');
+  let mx = -100, my = -100, rx = -100, ry = -100;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    curDot.style.left = mx + 'px';
+    curDot.style.top  = my + 'px';
+  });
+
+  // Smooth ring follow with lerp
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function animCursor() {
+    rx = lerp(rx, mx, 0.12);
+    ry = lerp(ry, my, 0.12);
+    curRing.style.left = rx + 'px';
+    curRing.style.top  = ry + 'px';
+    requestAnimationFrame(animCursor);
+  }
+  animCursor();
+
+  // Hover states
+  document.querySelectorAll('a, button, [data-magnetic]').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+  document.querySelectorAll('p, h1, h2, h3, .testi__text').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-text'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-text'));
+  });
+
+  /* ── Scroll Progress Bar ── */
+  const scrollTrack = document.getElementById('scrollTrack');
+  function updateProgress() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    scrollTrack.style.width = (window.scrollY / max * 100) + '%';
+  }
+
+  /* ── Nav scroll ── */
+  const nav = document.getElementById('nav');
+  function onScroll() {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    updateProgress();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ── Burger menu ── */
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav__links--open');
+    burger.classList.toggle('nav__burger--open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('nav__links--open');
+      burger.classList.remove('nav__burger--open');
     });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('nav__links--open');
-        burger.classList.remove('nav__burger--open');
-      });
+  });
+
+  /* ── Intersection Observer: reveal-up ── */
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revObs.unobserve(e.target);
+      }
     });
-    // スクロール フェードイン
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.about__inner, .work__item, .pricing__card, .testi__card, .contact__inner').forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
+  }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+
+  document.querySelectorAll('.reveal-up').forEach((el, i) => {
+    // stagger siblings
+    el.style.transitionDelay = (0.1 * (i % 4)) + 's';
+    revObs.observe(el);
+  });
+
+  /* ── Counter animation ── */
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.counter, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1200;
+    const start = performance.now();
+    function update(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter(e.target);
+        counterObs.unobserve(e.target);
+      }
     });
-  </script>
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-counter]').forEach(el => counterObs.observe(el));
+
+  /* ── About SVG draw animation ── */
+  function initSvgDraw() {
+    const svgEl = document.querySelector('.about__diagram');
+    if (!svgEl) return;
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        svgEl.classList.add('visible');
+        obs.disconnect();
+      }
+    }, { threshold: 0.3 });
+    obs.observe(svgEl);
+  }
+  initSvgDraw();
+
+  /* ── Pricing card 3D tilt ── */
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width  - 0.5;
+      const y = (e.clientY - r.top)  / r.height - 0.5;
+      card.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(6px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) translateZ(0)';
+      card.style.transition = 'transform .5s cubic-bezier(.16,1,.3,1)';
+    });
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform .1s linear';
+    });
+  });
+
+  /* ── Magnetic buttons ── */
+  document.querySelectorAll('[data-magnetic]').forEach(el => {
+    el.addEventListener('mousemove', e => {
+      const r = el.getBoundingClientRect();
+      const cx = r.left + r.width / 2;
+      const cy = r.top  + r.height / 2;
+      const dx = (e.clientX - cx) * 0.28;
+      const dy = (e.clientY - cy) * 0.28;
+      el.style.transform = `translate(${dx}px, ${dy}px)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+      el.style.transition = 'transform .5s cubic-bezier(.16,1,.3,1)';
+    });
+    el.addEventListener('mouseenter', () => {
+      el.style.transition = 'transform .15s linear';
+    });
+  });
+
+  /* ── Contact form submit ── */
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.contact__submit');
+    const text = btn.querySelector('.submit__text');
+    text.textContent = '送信しました ✓';
+    btn.style.background = '#6B7B6E';
+    btn.disabled = true;
+  });
+
+})();
+</script>
 </body>
 </html>
