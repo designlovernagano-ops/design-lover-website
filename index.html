@@ -3,415 +3,359 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design Lover | 思いをカタチに</title>
+  <title>Design Lover — 思いをカタチに</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ========== HEADER / NAV ========== -->
-  <header class="header">
-    <div class="container header__inner">
-      <a href="#" class="logo">
-        <span class="logo__main">Design Lover</span>
-        <span class="logo__sub">思いをカタチに</span>
-      </a>
-      <nav class="nav" id="nav">
-        <a href="#services">サービス</a>
-        <a href="#strengths">強み</a>
-        <a href="#pricing">料金</a>
-        <a href="#testimonials">実績</a>
-        <a href="#contact" class="nav__cta">お問い合わせ</a>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">DL</a>
+    <div class="nav__links" id="navLinks">
+      <a href="#work">サービス</a>
+      <a href="#about">について</a>
+      <a href="#pricing">料金</a>
+      <a href="#contact">連絡</a>
     </div>
-  </header>
+    <button class="nav__burger" id="burger" aria-label="メニュー">
+      <span></span><span></span>
+    </button>
+  </nav>
 
-  <!-- ========== HERO ========== -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero__bg-grid"></div>
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <p class="hero__eyebrow">治具設計 / 3Dプリンター / CADオペレーティング</p>
-        <h1 class="hero__title">
-          思いを、<br>
-          <span class="hero__accent">カタチに。</span>
-        </h1>
-        <p class="hero__desc">
-          あなたのアイデアを、精密な設計で現実へ。<br>
-          中小企業の設計リソース不足から個人の夢まで、<br>
-          Design Lover がワンストップで応えます。
-        </p>
-        <div class="hero__actions">
-          <a href="#contact" class="btn btn--primary">無料相談を申し込む</a>
-          <a href="#services" class="btn btn--ghost">サービスを見る</a>
-        </div>
-      </div>
-      <div class="hero__visual" aria-hidden="true">
-        <div class="hero__shape hero__shape--outer"></div>
-        <div class="hero__shape hero__shape--inner"></div>
-        <svg class="hero__icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- CAD/3D イメージ -->
-          <rect x="30" y="110" width="140" height="60" rx="4" fill="#E8F5EE" stroke="#4CAF82" stroke-width="2"/>
-          <polygon points="100,30 170,110 30,110" fill="#C6E8D8" stroke="#4CAF82" stroke-width="2"/>
-          <line x1="100" y1="30" x2="100" y2="170" stroke="#2E7D55" stroke-width="1.5" stroke-dasharray="5,4"/>
-          <line x1="30" y1="110" x2="170" y2="110" stroke="#2E7D55" stroke-width="1.5" stroke-dasharray="5,4"/>
-          <circle cx="100" cy="30" r="5" fill="#4CAF82"/>
-          <circle cx="30" cy="110" r="5" fill="#4CAF82"/>
-          <circle cx="170" cy="110" r="5" fill="#4CAF82"/>
-          <circle cx="100" cy="170" r="5" fill="#4CAF82"/>
-          <!-- ギア -->
-          <circle cx="152" cy="58" r="18" fill="none" stroke="#4CAF82" stroke-width="2.5"/>
-          <circle cx="152" cy="58" r="9" fill="#E8F5EE" stroke="#4CAF82" stroke-width="2"/>
-          <rect x="149" y="36" width="6" height="10" rx="2" fill="#4CAF82"/>
-          <rect x="149" y="70" width="6" height="10" rx="2" fill="#4CAF82"/>
-          <rect x="130" y="55" width="10" height="6" rx="2" fill="#4CAF82"/>
-          <rect x="164" y="55" width="10" height="6" rx="2" fill="#4CAF82"/>
-        </svg>
-      </div>
+    <div class="hero__grid" aria-hidden="true">
+      <svg class="hero__svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- 縦線 -->
+        <line x1="100" y1="0" x2="100" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="200" y1="0" x2="200" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="300" y1="0" x2="300" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="400" y1="0" x2="400" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="500" y1="0" x2="500" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="600" y1="0" x2="600" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="700" y1="0" x2="700" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="800" y1="0" x2="800" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="900" y1="0" x2="900" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="1000" y1="0" x2="1000" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="1100" y1="0" x2="1100" y2="700" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <!-- 横線 -->
+        <line x1="0" y1="100" x2="1200" y2="100" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="0" y1="200" x2="1200" y2="200" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="0" y1="300" x2="1200" y2="300" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="0" y1="400" x2="1200" y2="400" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="0" y1="500" x2="1200" y2="500" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <line x1="0" y1="600" x2="1200" y2="600" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+        <!-- 斜め寸法線 -->
+        <line x1="60" y1="40" x2="340" y2="40" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
+        <line x1="60" y1="37" x2="60" y2="43" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
+        <line x1="340" y1="37" x2="340" y2="43" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
+        <line x1="860" y1="640" x2="1140" y2="640" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
+        <line x1="860" y1="637" x2="860" y2="643" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
+        <line x1="1140" y1="637" x2="1140" y2="643" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
+        <!-- 交点マーク -->
+        <circle cx="100" cy="100" r="2" fill="#B8976A" opacity="0.35"/>
+        <circle cx="300" cy="300" r="2" fill="#B8976A" opacity="0.35"/>
+        <circle cx="900" cy="400" r="2" fill="#B8976A" opacity="0.35"/>
+        <circle cx="1100" cy="200" r="2" fill="#B8976A" opacity="0.35"/>
+        <!-- 注釈テキスト -->
+        <text x="66" y="35" font-family="DM Sans" font-size="8" fill="#B8976A" opacity="0.55" letter-spacing="1">280mm</text>
+        <text x="866" y="635" font-family="DM Sans" font-size="8" fill="#B8976A" opacity="0.55" letter-spacing="1">280mm</text>
+      </svg>
     </div>
-    <div class="hero__scroll-hint" aria-hidden="true">
-      <span></span>
+    <div class="hero__content">
+      <p class="hero__label">Design Lover — 個人設計事務所</p>
+      <h1 class="hero__title">
+        思いを、<br>
+        <em>カタチに。</em>
+      </h1>
+      <p class="hero__sub">治具設計から3Dプリンター造形まで。<br>あなたのアイデアに、精度を与える。</p>
+      <a href="#contact" class="hero__cta">相談する <span aria-hidden="true">→</span></a>
     </div>
-  </section>
-
-  <!-- ========== STATS ========== -->
-  <section class="stats">
-    <div class="container stats__grid">
-      <div class="stats__item">
-        <span class="stats__num">50<span class="stats__unit">件+</span></span>
-        <span class="stats__label">対応実績</span>
-      </div>
-      <div class="stats__item">
-        <span class="stats__num">5<span class="stats__unit">年+</span></span>
-        <span class="stats__label">設計経験</span>
-      </div>
-      <div class="stats__item">
-        <span class="stats__num">3<span class="stats__unit">日〜</span></span>
-        <span class="stats__label">最短納期</span>
-      </div>
-      <div class="stats__item">
-        <span class="stats__num">98<span class="stats__unit">%</span></span>
-        <span class="stats__label">顧客満足度</span>
-      </div>
+    <div class="hero__meta" aria-hidden="true">
+      <span>35.658°N</span>
+      <span>137.900°E</span>
+      <span>Nagano, JP</span>
     </div>
   </section>
 
-  <!-- ========== STRENGTHS ========== -->
-  <section class="section section--light" id="strengths">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-header__eyebrow">WHY CHOOSE US</p>
-        <h2 class="section-header__title">Design Lover の強み</h2>
-        <p class="section-header__desc">設計の専門家として、あなたのプロジェクトに寄り添います</p>
-      </div>
-      <div class="strengths__grid">
-        <div class="strength-card">
-          <div class="strength-card__icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#E8F5EE"/><path d="M16 24l6 6 10-12" stroke="#4CAF82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 class="strength-card__title">豊富な設計経験</h3>
-          <p class="strength-card__text">治具・装置設計を中心に、幅広い業種の製造ライン改善を支援してきた実績。図面一枚から量産対応まで対応します。</p>
-        </div>
-        <div class="strength-card">
-          <div class="strength-card__icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#E8F5EE"/><path d="M24 14v10l6 4" stroke="#4CAF82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="8" stroke="#4CAF82" stroke-width="2"/></svg>
-          </div>
-          <h3 class="strength-card__title">スピード対応</h3>
-          <p class="strength-card__text">「急ぎで図面が欲しい」にも柔軟に対応。3Dプリンターによる試作品も最短3日で納品が可能です。</p>
-        </div>
-        <div class="strength-card">
-          <div class="strength-card__icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#E8F5EE"/><path d="M18 28c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#4CAF82" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="20" r="3" fill="#4CAF82"/><path d="M12 36c0-5 5-8 12-8s12 3 12 8" stroke="#4CAF82" stroke-width="2" stroke-linecap="round" stroke-dasharray="3,2"/></svg>
-          </div>
-          <h3 class="strength-card__title">個人〜法人まで対応</h3>
-          <p class="strength-card__text">「こんなもの作れる？」という相談から本格的な外注設計業務まで、規模を問わずお受けします。</p>
-        </div>
-        <div class="strength-card">
-          <div class="strength-card__icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#E8F5EE"/><rect x="16" y="18" width="16" height="12" rx="2" stroke="#4CAF82" stroke-width="2.5"/><path d="M20 18v-3a4 4 0 018 0v3" stroke="#4CAF82" stroke-width="2.5" stroke-linecap="round"/></svg>
-          </div>
-          <h3 class="strength-card__title">安心のコミュニケーション</h3>
-          <p class="strength-card__text">要件定義から納品まで、進捗を丁寧にご報告。専門知識がなくても安心して任せていただけます。</p>
-        </div>
-        <div class="strength-card">
-          <div class="strength-card__icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#E8F5EE"/><polygon points="24,14 32,30 16,30" fill="none" stroke="#4CAF82" stroke-width="2.5" stroke-linejoin="round"/><circle cx="24" cy="34" r="2" fill="#4CAF82"/></svg>
-          </div>
-          <h3 class="strength-card__title">マルチCAD対応</h3>
-          <p class="strength-card__text">SolidWorks・AutoCAD・Fusion 360 など主要CADに対応。データ形式の変換作業も承ります。</p>
-        </div>
-        <div class="strength-card">
-          <div class="strength-card__icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#E8F5EE"/><path d="M24 16v4M24 28v4M16 24h4M28 24h4" stroke="#4CAF82" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="5" stroke="#4CAF82" stroke-width="2.5"/></svg>
-          </div>
-          <h3 class="strength-card__title">試作から量産提案まで</h3>
-          <p class="strength-card__text">3Dプリンターで素早く試作 → フィードバック → 製造図面へ昇華。アイデア実現を一気通貫でサポートします。</p>
-        </div>
-      </div>
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__inner">
+      <span>治具・装置設計</span><span class="ticker__dot">·</span>
+      <span>3Dプリンター造形</span><span class="ticker__dot">·</span>
+      <span>CADオペレーティング</span><span class="ticker__dot">·</span>
+      <span>設計リソース支援</span><span class="ticker__dot">·</span>
+      <span>試作・少量生産</span><span class="ticker__dot">·</span>
+      <span>治具・装置設計</span><span class="ticker__dot">·</span>
+      <span>3Dプリンター造形</span><span class="ticker__dot">·</span>
+      <span>CADオペレーティング</span><span class="ticker__dot">·</span>
+      <span>設計リソース支援</span><span class="ticker__dot">·</span>
+      <span>試作・少量生産</span><span class="ticker__dot">·</span>
     </div>
-  </section>
+  </div>
 
-  <!-- ========== SERVICES ========== -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-header__eyebrow">SERVICES</p>
-        <h2 class="section-header__title">サービス内容</h2>
-        <p class="section-header__desc">設計・造形・オペレーションをワンストップで</p>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__left">
+        <p class="label">About</p>
+        <div class="about__diagram" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="218" height="218" stroke="#B8976A" stroke-width="0.6" opacity="0.4"/>
+            <line x1="1" y1="73" x2="219" y2="73" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2"/>
+            <line x1="1" y1="147" x2="219" y2="147" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2"/>
+            <line x1="73" y1="1" x2="73" y2="219" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2"/>
+            <line x1="147" y1="1" x2="147" y2="219" stroke="#1C1C1C" stroke-width="0.4" opacity="0.2"/>
+            <!-- 中心のオブジェクト -->
+            <circle cx="110" cy="110" r="48" stroke="#1C1C1C" stroke-width="0.8" opacity="0.5" fill="none"/>
+            <circle cx="110" cy="110" r="32" stroke="#B8976A" stroke-width="0.8" opacity="0.6" fill="none"/>
+            <circle cx="110" cy="110" r="4" fill="#B8976A" opacity="0.8"/>
+            <!-- 十字線 -->
+            <line x1="110" y1="58" x2="110" y2="162" stroke="#1C1C1C" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3"/>
+            <line x1="58" y1="110" x2="162" y2="110" stroke="#1C1C1C" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3"/>
+            <!-- 寸法線 -->
+            <line x1="20" y1="62" x2="20" y2="158" stroke="#B8976A" stroke-width="0.5" opacity="0.5"/>
+            <line x1="17" y1="62" x2="23" y2="62" stroke="#B8976A" stroke-width="0.5" opacity="0.5"/>
+            <line x1="17" y1="158" x2="23" y2="158" stroke="#B8976A" stroke-width="0.5" opacity="0.5"/>
+            <text x="8" y="114" font-family="DM Sans" font-size="7" fill="#B8976A" opacity="0.7" transform="rotate(-90,8,114)">Ø96mm</text>
+          </svg>
+        </div>
       </div>
-      <div class="services__grid">
-        <div class="service-card">
-          <div class="service-card__num">01</div>
-          <div class="service-card__body">
-            <h3 class="service-card__title">治具・装置設計</h3>
-            <p class="service-card__text">製造ラインの効率化を目指した治具・専用装置の設計を行います。要件定義〜3Dモデリング〜製造図面作成まで一貫対応。コスト削減と品質向上を同時に実現します。</p>
-            <ul class="service-card__list">
-              <li>検査治具・組立治具の設計</li>
-              <li>専用装置・省力化装置の設計</li>
-              <li>製造図面（2D/3D）作成</li>
-            </ul>
+      <div class="about__right">
+        <h2 class="about__title">設計とは、<br>問いに答えを<br>刻む仕事だ。</h2>
+        <p class="about__body">Design Lover は、長野を拠点とする個人設計事務所です。治具・専用装置の設計、3Dプリンターによる試作造形、CAD代行業務を通じて、中小企業の「設計リソース不足」と個人の「アイデアをカタチにしたい」という両方の需要に応えます。</p>
+        <p class="about__body">大きな組織より小さく動ける。だからこそ、あなたの課題に直接向き合えます。</p>
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-num">50+</span>
+            <span class="about__stat-label">対応実績</span>
           </div>
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none"><rect x="12" y="36" width="40" height="16" rx="3" fill="#C6E8D8" stroke="#4CAF82" stroke-width="2"/><rect x="20" y="28" width="24" height="10" rx="2" fill="#E8F5EE" stroke="#4CAF82" stroke-width="1.5"/><circle cx="22" cy="44" r="3" fill="#4CAF82"/><circle cx="42" cy="44" r="3" fill="#4CAF82"/><path d="M32 12l14 16H18L32 12z" fill="#E8F5EE" stroke="#4CAF82" stroke-width="2"/></svg>
+          <div class="about__stat">
+            <span class="about__stat-num">5yr</span>
+            <span class="about__stat-label">設計経験</span>
           </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card__num">02</div>
-          <div class="service-card__body">
-            <h3 class="service-card__title">3Dプリンター造形</h3>
-            <p class="service-card__text">アイデアスケッチや簡単な仕様書から3Dデータを作成し、実物に。試作品製作・少量生産・展示モデルなど、幅広い用途に対応します。</p>
-            <ul class="service-card__list">
-              <li>試作品・モックアップ製作</li>
-              <li>3Dデータ（STL/STEP）作成</li>
-              <li>少量生産・展示モデル対応</li>
-            </ul>
-          </div>
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none"><rect x="16" y="40" width="32" height="8" rx="2" fill="#C6E8D8" stroke="#4CAF82" stroke-width="2"/><rect x="20" y="28" width="24" height="14" rx="2" fill="#E8F5EE" stroke="#4CAF82" stroke-width="1.5"/><path d="M24 28V20h16v8" stroke="#4CAF82" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="16" r="4" fill="#4CAF82"/><line x1="32" y1="28" x2="32" y2="48" stroke="#2E7D55" stroke-width="1" stroke-dasharray="3,3"/></svg>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card__num">03</div>
-          <div class="service-card__body">
-            <h3 class="service-card__title">CADオペレーティング</h3>
-            <p class="service-card__text">設計者リソースが足りない企業様の外注CAD業務を代行します。手書きスケッチ・PDF図面からのCAD化、データ変換、既存図面の修正など柔軟に対応。</p>
-            <ul class="service-card__list">
-              <li>2D図面作成・修正（AutoCAD）</li>
-              <li>3Dモデリング（SolidWorks / Fusion 360）</li>
-              <li>CADデータ変換・整備</li>
-            </ul>
-          </div>
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none"><rect x="10" y="14" width="44" height="32" rx="3" fill="#E8F5EE" stroke="#4CAF82" stroke-width="2"/><rect x="16" y="20" width="32" height="20" rx="1" fill="#fff" stroke="#C6E8D8" stroke-width="1.5"/><line x1="20" y1="28" x2="44" y2="28" stroke="#4CAF82" stroke-width="1.5"/><line x1="20" y1="33" x2="36" y2="33" stroke="#4CAF82" stroke-width="1.5"/><rect x="24" y="46" width="16" height="4" rx="1" fill="#C6E8D8"/></svg>
+          <div class="about__stat">
+            <span class="about__stat-num">3day</span>
+            <span class="about__stat-label">最短納期</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== PRICING ========== -->
-  <section class="section section--light" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-header__eyebrow">PRICING</p>
-        <h2 class="section-header__title">料金プラン</h2>
-        <p class="section-header__desc">まずはお気軽にご相談ください。お見積もりは無料です。</p>
+  <!-- WORK / SERVICES -->
+  <section class="work" id="work">
+    <div class="work__header">
+      <p class="label">Services</p>
+      <h2 class="work__title">できること</h2>
+    </div>
+    <div class="work__list">
+      <div class="work__item">
+        <div class="work__item-top">
+          <span class="work__num">01</span>
+          <span class="work__tag">Jig & Device</span>
+        </div>
+        <h3 class="work__item-title">治具・装置設計</h3>
+        <p class="work__item-body">検査治具、組立治具、省力化装置など。製造ラインの課題を構造から解決します。要件定義からCAD図面・3Dモデルまで一気通貫。</p>
+        <div class="work__line" aria-hidden="true"></div>
       </div>
-      <div class="pricing__grid">
-        <div class="pricing-card">
-          <div class="pricing-card__badge">個人向け</div>
-          <h3 class="pricing-card__name">スポット相談</h3>
-          <div class="pricing-card__price">
-            <span class="pricing-card__yen">¥</span>5,000<span class="pricing-card__unit">〜 / 1h</span>
+      <div class="work__item">
+        <div class="work__item-top">
+          <span class="work__num">02</span>
+          <span class="work__tag">3D Print</span>
+        </div>
+        <h3 class="work__item-title">3Dプリンター造形</h3>
+        <p class="work__item-body">スケッチや仕様書から3Dデータを起こし、試作品をお届けします。最短3日。アイデアを手で触れる形に。</p>
+        <div class="work__line" aria-hidden="true"></div>
+      </div>
+      <div class="work__item">
+        <div class="work__item-top">
+          <span class="work__num">03</span>
+          <span class="work__tag">CAD Operation</span>
+        </div>
+        <h3 class="work__item-title">CADオペレーティング</h3>
+        <p class="work__item-body">SolidWorks・AutoCAD・Fusion 360 対応。手書き図面のCAD化、既存データの修正・整備、フォーマット変換など。</p>
+        <div class="work__line" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="pricing__inner">
+      <div class="pricing__header">
+        <p class="label">Pricing</p>
+        <h2 class="pricing__title">料金</h2>
+        <p class="pricing__note-top">見積もり・相談は無料。まず話しましょう。</p>
+      </div>
+      <div class="pricing__cards">
+        <div class="pricing__card">
+          <div class="pricing__card-head">
+            <p class="pricing__plan">Spot</p>
+            <p class="pricing__price">¥5,000<span>/h〜</span></p>
           </div>
-          <p class="pricing-card__desc">「こんなもの作れる？」という最初の相談に。オンライン・対面どちらでも対応します。</p>
-          <ul class="pricing-card__features">
-            <li>✓ 要件ヒアリング</li>
-            <li>✓ 実現可能性の確認</li>
-            <li>✓ 概算費用のご提示</li>
-            <li>✓ オンライン対応可</li>
+          <p class="pricing__desc">初回相談・スポット依頼向け。「これ、できる？」から始められます。</p>
+          <ul class="pricing__list">
+            <li>要件ヒアリング</li>
+            <li>実現可能性の確認</li>
+            <li>概算費用の提示</li>
+            <li>オンライン対応可</li>
           </ul>
-          <a href="#contact" class="btn btn--outline">まず相談する</a>
+          <a href="#contact" class="pricing__btn">相談する</a>
         </div>
-        <div class="pricing-card pricing-card--featured">
-          <div class="pricing-card__badge pricing-card__badge--white">人気No.1</div>
-          <h3 class="pricing-card__name">単品依頼</h3>
-          <div class="pricing-card__price">
-            要<span class="pricing-card__unit">見積もり</span>
+        <div class="pricing__card pricing__card--gold">
+          <div class="pricing__card-head">
+            <p class="pricing__plan">Project</p>
+            <p class="pricing__price">見積もり</p>
           </div>
-          <p class="pricing-card__desc">1件ごとの設計依頼に。内容・規模に応じてお見積もりします。小ロット・急ぎ対応も可能です。</p>
-          <ul class="pricing-card__features">
-            <li>✓ 治具・装置設計</li>
-            <li>✓ 3Dプリンター造形</li>
-            <li>✓ CADデータ作成</li>
-            <li>✓ 修正2回まで含む</li>
+          <p class="pricing__desc">1案件ごとの依頼。内容・規模に応じて個別お見積もりします。</p>
+          <ul class="pricing__list">
+            <li>治具・装置設計</li>
+            <li>3Dプリンター造形</li>
+            <li>CADデータ作成</li>
+            <li>修正2回まで込み</li>
           </ul>
-          <a href="#contact" class="btn btn--white">無料見積もりを依頼</a>
+          <a href="#contact" class="pricing__btn pricing__btn--dark">見積もりを依頼</a>
         </div>
-        <div class="pricing-card">
-          <div class="pricing-card__badge">法人向け</div>
-          <h3 class="pricing-card__name">継続サポート</h3>
-          <div class="pricing-card__price">
-            <span class="pricing-card__yen">¥</span>30,000<span class="pricing-card__unit">〜 / 月</span>
+        <div class="pricing__card">
+          <div class="pricing__card-head">
+            <p class="pricing__plan">Retainer</p>
+            <p class="pricing__price">¥30,000<span>/月〜</span></p>
           </div>
-          <p class="pricing-card__desc">設計リソース不足の企業様に。月単位で設計業務を継続的にサポートします。</p>
-          <ul class="pricing-card__features">
-            <li>✓ 月次設計作業（時間制）</li>
-            <li>✓ 優先対応・即日レスポンス</li>
-            <li>✓ 複数案件同時対応</li>
-            <li>✓ 定例ミーティング含む</li>
+          <p class="pricing__desc">設計リソースが足りない企業向け。月単位で設計業務を支援します。</p>
+          <ul class="pricing__list">
+            <li>月次設計作業（時間制）</li>
+            <li>優先対応・即日レス</li>
+            <li>複数案件同時進行</li>
+            <li>定例MTG込み</li>
           </ul>
-          <a href="#contact" class="btn btn--outline">詳細を問い合わせる</a>
+          <a href="#contact" class="pricing__btn">問い合わせる</a>
         </div>
       </div>
-      <p class="pricing__note">※ 表示価格は税抜きです。内容により変動する場合があります。まずはお気軽にお問い合わせください。</p>
+      <p class="pricing__note-bottom">※ 価格は税抜き表示。内容により変動します。</p>
     </div>
   </section>
 
-  <!-- ========== TESTIMONIALS ========== -->
-  <section class="section" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-header__eyebrow">TESTIMONIALS</p>
-        <h2 class="section-header__title">お客様の声 / 実績</h2>
-        <p class="section-header__desc">Design Lover にご依頼いただいた方々の声をご紹介します</p>
-      </div>
-      <div class="testimonials__grid">
-        <div class="testimonial-card">
-          <div class="testimonial-card__stars" aria-label="評価5つ星">★★★★★</div>
-          <p class="testimonial-card__text">「設計者が退職してしまい困っていたところ、すぐに対応してもらえました。図面の品質も高く、工場側からも好評でした。」</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">M</div>
-            <div>
-              <p class="testimonial-card__name">M.T. 様</p>
-              <p class="testimonial-card__role">製造業（従業員30名）</p>
-            </div>
-          </div>
+  <!-- TESTIMONIALS -->
+  <section class="testi">
+    <div class="testi__inner">
+      <p class="label">Voices</p>
+      <h2 class="testi__title">お客様の声</h2>
+      <div class="testi__grid">
+        <div class="testi__card">
+          <p class="testi__text">「設計者の退職直後に依頼しました。品質が高く、工場からも太鼓判。頼れる外部の設計者ができた感覚です。」</p>
+          <footer class="testi__footer">
+            <span class="testi__name">M.T.</span>
+            <span class="testi__role">製造業・30名</span>
+          </footer>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-card__stars" aria-label="評価5つ星">★★★★★</div>
-          <p class="testimonial-card__text">「頭の中にあったアイデアをスケッチで伝えたら、3日後には試作品が手元に。こんなに早くカタチになるとは思っていませんでした！」</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">K</div>
-            <div>
-              <p class="testimonial-card__name">K.S. 様</p>
-              <p class="testimonial-card__role">個人（DIYクリエイター）</p>
-            </div>
-          </div>
+        <div class="testi__card">
+          <p class="testi__text">「スケッチを送ったら3日で試作品が届いた。思っていたより遥かに精度が高くて驚いた。」</p>
+          <footer class="testi__footer">
+            <span class="testi__name">K.S.</span>
+            <span class="testi__role">個人・DIYクリエイター</span>
+          </footer>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-card__stars" aria-label="評価5つ星">★★★★★</div>
-          <p class="testimonial-card__text">「CADデータの変換と古い図面の整備を依頼しました。専門的な内容でも丁寧に確認しながら進めてくれ、安心して任せられました。」</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">A</div>
-            <div>
-              <p class="testimonial-card__name">A.N. 様</p>
-              <p class="testimonial-card__role">機械部品メーカー（従業員15名）</p>
-            </div>
-          </div>
+        <div class="testi__card">
+          <p class="testi__text">「古い図面の整備とデータ変換をまとめて依頼。専門的な内容でも確認を挟みながら丁寧に進めてもらえた。」</p>
+          <footer class="testi__footer">
+            <span class="testi__name">A.N.</span>
+            <span class="testi__role">機械部品メーカー・15名</span>
+          </footer>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
-  <section class="section section--light" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-header__eyebrow">CONTACT</p>
-        <h2 class="section-header__title">お問い合わせ</h2>
-        <p class="section-header__desc">お見積もり・ご相談は無料です。まずはお気軽にご連絡ください。</p>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__left">
+        <p class="label">Contact</p>
+        <h2 class="contact__title">話し<em>ましょう。</em></h2>
+        <p class="contact__body">まずは気軽に。どんな小さな相談でも歓迎します。見積もりは無料です。</p>
+        <div class="contact__detail">
+          <p>Nagano, Japan</p>
+          <p>返信まで通常24h以内</p>
+        </div>
       </div>
-      <div class="contact__wrap">
-        <form class="contact-form" onsubmit="return false;">
-          <div class="form-row form-row--half">
-            <div class="form-group">
-              <label class="form-label" for="name">お名前 <span class="form-required">必須</span></label>
-              <input class="form-input" type="text" id="name" name="name" placeholder="山田 太郎" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="company">会社名・屋号</label>
-              <input class="form-input" type="text" id="company" name="company" placeholder="株式会社〇〇" />
-            </div>
-          </div>
-          <div class="form-row form-row--half">
-            <div class="form-group">
-              <label class="form-label" for="email">メールアドレス <span class="form-required">必須</span></label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="example@mail.com" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="tel">電話番号</label>
-              <input class="form-input" type="tel" id="tel" name="tel" placeholder="090-0000-0000" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="type">お問い合わせ種別 <span class="form-required">必須</span></label>
-            <select class="form-input form-select" id="type" name="type">
-              <option value="" disabled selected>選択してください</option>
-              <option>治具・装置設計のご相談</option>
-              <option>3Dプリンター造形のご依頼</option>
-              <option>CADオペレーティングのご依頼</option>
-              <option>料金・見積もりについて</option>
-              <option>継続サポートについて</option>
-              <option>その他</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="message">メッセージ <span class="form-required">必須</span></label>
-            <textarea class="form-input form-textarea" id="message" name="message" placeholder="ご相談内容をお書きください。どんな些細なことでもお気軽に！"></textarea>
-          </div>
-          <div class="form-group form-group--center">
-            <button type="submit" class="btn btn--primary btn--large">送信する</button>
-          </div>
-        </form>
-      </div>
+      <form class="contact__form" onsubmit="return false;">
+        <div class="field">
+          <label class="field__label" for="c-name">名前 <span>*</span></label>
+          <input class="field__input" type="text" id="c-name" placeholder="山田 太郎" />
+        </div>
+        <div class="field">
+          <label class="field__label" for="c-company">会社名・屋号</label>
+          <input class="field__input" type="text" id="c-company" placeholder="任意" />
+        </div>
+        <div class="field">
+          <label class="field__label" for="c-email">メール <span>*</span></label>
+          <input class="field__input" type="email" id="c-email" placeholder="your@email.com" />
+        </div>
+        <div class="field">
+          <label class="field__label" for="c-type">相談の種類 <span>*</span></label>
+          <select class="field__input field__select" id="c-type">
+            <option value="" disabled selected>選択してください</option>
+            <option>治具・装置設計</option>
+            <option>3Dプリンター造形</option>
+            <option>CADオペレーティング</option>
+            <option>継続サポート</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field__label" for="c-msg">メッセージ <span>*</span></label>
+          <textarea class="field__input field__textarea" id="c-msg" placeholder="どんな些細なことでもどうぞ。"></textarea>
+        </div>
+        <button type="submit" class="contact__submit">送信する →</button>
+      </form>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="logo__main logo__main--white">Design Lover</span>
-        <p class="footer__tagline">思いをカタチに。</p>
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__logo">Design Lover</p>
+        <p class="footer__copy">© 2025 Design Lover. All rights reserved.</p>
       </div>
       <nav class="footer__nav">
-        <a href="#strengths">強み</a>
-        <a href="#services">サービス</a>
+        <a href="#work">サービス</a>
+        <a href="#about">について</a>
         <a href="#pricing">料金</a>
-        <a href="#testimonials">実績</a>
-        <a href="#contact">お問い合わせ</a>
+        <a href="#contact">連絡</a>
       </nav>
-    </div>
-    <div class="footer__bottom">
-      <p>© 2025 Design Lover. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // ハンバーガーメニュー
-    const hamburger = document.getElementById('hamburger');
+    // ナビ スクロール
     const nav = document.getElementById('nav');
-    hamburger.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('nav--open');
-      hamburger.classList.toggle('hamburger--open', isOpen);
-      hamburger.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
     });
-    // ナビリンクをクリックしたらメニューを閉じる
-    nav.querySelectorAll('a').forEach(a => {
+    // バーガー
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav__links--open');
+      burger.classList.toggle('nav__burger--open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
-        nav.classList.remove('nav--open');
-        hamburger.classList.remove('hamburger--open');
+        navLinks.classList.remove('nav__links--open');
+        burger.classList.remove('nav__burger--open');
       });
     });
-
-    // スクロールでヘッダーに影
-    window.addEventListener('scroll', () => {
-      document.querySelector('.header').classList.toggle('header--scrolled', window.scrollY > 40);
+    // スクロール フェードイン
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.about__inner, .work__item, .pricing__card, .testi__card, .contact__inner').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
     });
   </script>
 </body>
