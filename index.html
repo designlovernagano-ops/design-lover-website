@@ -58,44 +58,109 @@
      HERO
      ============================================================ -->
 <section class="hero" id="hero">
-  <!-- Animated engineering grid -->
+  <!-- Engineering grid background -->
   <div class="hero__bg" aria-hidden="true">
     <svg class="hero__grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <!-- Vertical grid lines -->
-      <line class="g-line" x1="120" y1="0" x2="120" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="240" y1="0" x2="240" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="360" y1="0" x2="360" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="480" y1="0" x2="480" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="600" y1="0" x2="600" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="720" y1="0" x2="720" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="840" y1="0" x2="840" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="960" y1="0" x2="960" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="1080" y1="0" x2="1080" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="1200" y1="0" x2="1200" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="1320" y1="0" x2="1320" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <!-- Horizontal grid lines -->
-      <line class="g-line" x1="0" y1="150" x2="1440" y2="150" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="0" y1="300" x2="1440" y2="300" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="0" y1="450" x2="1440" y2="450" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="0" y1="600" x2="1440" y2="600" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="0" y1="750" x2="1440" y2="750" stroke="#1C1C1C" stroke-width="0.4"/>
-      <!-- Gold dimension annotations -->
+      <line class="g-line" x1="120" y1="0" x2="120" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="240" y1="0" x2="240" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="360" y1="0" x2="360" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="480" y1="0" x2="480" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="600" y1="0" x2="600" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="720" y1="0" x2="720" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="840" y1="0" x2="840" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="960" y1="0" x2="960" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="1080" y1="0" x2="1080" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="1200" y1="0" x2="1200" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="1320" y1="0" x2="1320" y2="900" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="150" x2="1440" y2="150" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="300" x2="1440" y2="300" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="450" x2="1440" y2="450" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="600" x2="1440" y2="600" stroke="#F7F5F0" stroke-width="0.4"/>
+      <line class="g-line" x1="0" y1="750" x2="1440" y2="750" stroke="#F7F5F0" stroke-width="0.4"/>
+      <!-- Gold annotations -->
       <line class="g-accent" x1="80" y1="64" x2="380" y2="64" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
       <line class="g-accent" x1="80" y1="60" x2="80" y2="68" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
       <line class="g-accent" x1="380" y1="60" x2="380" y2="68" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
       <text class="g-label" x="86" y="57" font-family="DM Sans" font-size="8" fill="#B8976A" opacity="0" letter-spacing="1.5">280.0mm</text>
-      <!-- Target circle bottom-right -->
-      <circle class="g-circle" cx="1200" cy="600" r="80" stroke="#B8976A" stroke-width="0.5" fill="none" opacity="0"/>
-      <circle class="g-circle" cx="1200" cy="600" r="40" stroke="#1C1C1C" stroke-width="0.4" fill="none" opacity="0"/>
-      <line class="g-cross" x1="1200" y1="520" x2="1200" y2="680" stroke="#1C1C1C" stroke-width="0.3" stroke-dasharray="3,4" opacity="0"/>
-      <line class="g-cross" x1="1120" y1="600" x2="1280" y2="600" stroke="#1C1C1C" stroke-width="0.3" stroke-dasharray="3,4" opacity="0"/>
-      <circle class="g-centerdot" cx="1200" cy="600" r="3" fill="#B8976A" opacity="0"/>
-      <!-- Coordinates -->
+      <circle class="g-circle" cx="1200" cy="620" r="90" stroke="#B8976A" stroke-width="0.5" fill="none" opacity="0"/>
+      <circle class="g-circle" cx="1200" cy="620" r="44" stroke="#F7F5F0" stroke-width="0.3" fill="none" opacity="0"/>
+      <line class="g-cross" x1="1200" y1="530" x2="1200" y2="710" stroke="#B8976A" stroke-width="0.4" stroke-dasharray="3,5" opacity="0"/>
+      <line class="g-cross" x1="1110" y1="620" x2="1290" y2="620" stroke="#B8976A" stroke-width="0.4" stroke-dasharray="3,5" opacity="0"/>
+      <circle class="g-centerdot" cx="1200" cy="620" r="3.5" fill="#B8976A" opacity="0"/>
       <text class="g-coord" x="1310" y="28" font-family="DM Sans" font-size="9" fill="#B8976A" opacity="0" letter-spacing="1">35.658°N</text>
       <text class="g-coord" x="1310" y="44" font-family="DM Sans" font-size="9" fill="#B8976A" opacity="0" letter-spacing="1">137.900°E</text>
     </svg>
   </div>
 
+  <!-- Diagonal gold accent -->
+  <div class="hero__slash" aria-hidden="true"></div>
+
+  <!-- Animated gear visual (right side) -->
+  <div class="hero__visual" aria-hidden="true">
+    <svg class="hero__gear-svg" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Static outer annotation rings -->
+      <circle cx="350" cy="350" r="330" stroke="#B8976A" stroke-width="0.4" stroke-dasharray="8,7" opacity="0.12"/>
+      <circle cx="350" cy="350" r="300" stroke="#F7F5F0" stroke-width="0.3" opacity="0.04"/>
+      <!-- PCD dashed circle -->
+      <circle cx="350" cy="350" r="198" stroke="#B8976A" stroke-width="0.5" stroke-dasharray="5,4" opacity="0.28"/>
+      <!-- Static annotations -->
+      <line x1="350" y1="152" x2="440" y2="108" stroke="#B8976A" stroke-width="0.5" opacity="0.4"/>
+      <text x="445" y="105" font-family="DM Sans,sans-serif" font-size="10" fill="#B8976A" opacity="0.55" letter-spacing="0.5">P.C.D Ø396</text>
+      <line x1="610" y1="350" x2="655" y2="350" stroke="#B8976A" stroke-width="0.5" opacity="0.35"/>
+      <text x="660" y="354" font-family="DM Sans,sans-serif" font-size="10" fill="#B8976A" opacity="0.45" letter-spacing="0.5">Ø540</text>
+      <text x="660" y="368" font-family="DM Sans,sans-serif" font-size="8" fill="#B8976A" opacity="0.3" letter-spacing="0.3">z=24  m=5</text>
+
+      <!-- MAIN GEAR — rotates slowly -->
+      <g class="hero__gear-main">
+        <!-- Gear rings -->
+        <circle cx="350" cy="350" r="270" stroke="#B8976A" stroke-width="1.0" opacity="0.32"/>
+        <circle cx="350" cy="350" r="168" stroke="#F7F5F0" stroke-width="0.4" opacity="0.09"/>
+        <!-- Spokes -->
+        <line x1="350" y1="82" x2="350" y2="618" stroke="#F7F5F0" stroke-width="0.5" opacity="0.07"/>
+        <line x1="82"  y1="350" x2="618" y2="350" stroke="#F7F5F0" stroke-width="0.5" opacity="0.07"/>
+        <line x1="160" y1="160" x2="540" y2="540" stroke="#F7F5F0" stroke-width="0.5" opacity="0.07"/>
+        <line x1="540" y1="160" x2="160" y2="540" stroke="#F7F5F0" stroke-width="0.5" opacity="0.07"/>
+        <!-- Core boss -->
+        <circle cx="350" cy="350" r="60" stroke="#B8976A" stroke-width="1.6" fill="rgba(184,151,106,0.07)" opacity="0.6"/>
+        <circle cx="350" cy="350" r="18" fill="#B8976A" opacity="0.5"/>
+        <!-- 12 TEETH at every 30° (rect pointing up, rotated around center) -->
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(0,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(30,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(60,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(90,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(120,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(150,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(180,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(210,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(240,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(270,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(300,350,350)"/>
+        <rect x="342" y="88" width="16" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" transform="rotate(330,350,350)"/>
+        <!-- 6 BOLT HOLES on PCD r=198, at every 60° -->
+        <circle cx="350"   cy="152"   r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.07)" opacity="0.7"/>
+        <circle cx="521.4" cy="251"   r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.07)" opacity="0.7"/>
+        <circle cx="521.4" cy="449"   r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.07)" opacity="0.7"/>
+        <circle cx="350"   cy="548"   r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.07)" opacity="0.7"/>
+        <circle cx="178.6" cy="449"   r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.07)" opacity="0.7"/>
+        <circle cx="178.6" cy="251"   r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.07)" opacity="0.7"/>
+      </g>
+
+      <!-- INNER HUB — counter-rotates fast -->
+      <g class="hero__gear-inner">
+        <circle cx="350" cy="350" r="82" stroke="#B8976A" stroke-width="0.8" opacity="0.38"/>
+        <!-- 4 hub keyways -->
+        <rect x="346" y="264" width="8" height="20" rx="1" stroke="#B8976A" stroke-width="0.6" fill="rgba(184,151,106,0.06)" transform="rotate(0,350,350)"/>
+        <rect x="346" y="264" width="8" height="20" rx="1" stroke="#B8976A" stroke-width="0.6" fill="rgba(184,151,106,0.06)" transform="rotate(90,350,350)"/>
+        <rect x="346" y="264" width="8" height="20" rx="1" stroke="#B8976A" stroke-width="0.6" fill="rgba(184,151,106,0.06)" transform="rotate(180,350,350)"/>
+        <rect x="346" y="264" width="8" height="20" rx="1" stroke="#B8976A" stroke-width="0.6" fill="rgba(184,151,106,0.06)" transform="rotate(270,350,350)"/>
+        <!-- Hub crosshair -->
+        <line x1="350" y1="295" x2="350" y2="405" stroke="#B8976A" stroke-width="0.4" stroke-dasharray="3,3" opacity="0.3"/>
+        <line x1="295" y1="350" x2="405" y2="350" stroke="#B8976A" stroke-width="0.4" stroke-dasharray="3,3" opacity="0.3"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Left: text content -->
   <div class="hero__content">
     <p class="hero__eyebrow" id="heroEyebrow" aria-label="Design Lover — 個人設計事務所"></p>
     <h1 class="hero__title">
@@ -114,10 +179,21 @@
         <span>サービスを見る</span>
       </a>
     </div>
-  </div>
-
-  <div class="hero__image" aria-hidden="true">
-    <img src="img-hero.svg" alt="" loading="lazy">
+    <!-- Stats strip -->
+    <div class="hero__stats" aria-hidden="true">
+      <div class="hero__stat">
+        <span class="hero__stat-n">50<sup>+</sup></span>
+        <span class="hero__stat-l">対応実績</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-n">5<sup>yr</sup></span>
+        <span class="hero__stat-l">設計経験</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-n">3<sup>day</sup></span>
+        <span class="hero__stat-l">最短納期</span>
+      </div>
+    </div>
   </div>
 
   <div class="hero__meta" aria-hidden="true">
