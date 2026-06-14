@@ -1,0 +1,80 @@
+<svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="260" fill="#F7F5F0"/>
+  <rect x="12" y="12" width="376" height="236" stroke="#1C1C1C" stroke-width="0.5" opacity="0.12" fill="none"/>
+  <rect x="16" y="16" width="368" height="228" stroke="#B8976A" stroke-width="0.3" opacity="0.25" fill="none"/>
+
+  <!-- Printer outer frame -->
+  <rect x="75" y="22" width="250" height="205" stroke="#1C1C1C" stroke-width="1.3" fill="rgba(28,28,28,0.02)"/>
+
+  <!-- Frame top rail -->
+  <rect x="75" y="22" width="250" height="14" fill="rgba(28,28,28,0.07)"/>
+  <line x1="75" y1="22" x2="325" y2="22" stroke="#1C1C1C" stroke-width="0.5"/>
+
+  <!-- Vertical guide rails -->
+  <rect x="83" y="36" width="10" height="191" fill="rgba(28,28,28,0.08)" stroke="#1C1C1C" stroke-width="0.5"/>
+  <rect x="307" y="36" width="10" height="191" fill="rgba(28,28,28,0.08)" stroke="#1C1C1C" stroke-width="0.5"/>
+  <!-- Rail texture -->
+  <line x1="88" y1="50" x2="88" y2="60" stroke="#B8976A" stroke-width="0.5" opacity="0.4"/>
+  <line x1="88" y1="70" x2="88" y2="80" stroke="#B8976A" stroke-width="0.5" opacity="0.4"/>
+  <line x1="88" y1="90" x2="88" y2="100" stroke="#B8976A" stroke-width="0.5" opacity="0.4"/>
+  <line x1="312" y1="50" x2="312" y2="60" stroke="#B8976A" stroke-width="0.5" opacity="0.4"/>
+  <line x1="312" y1="70" x2="312" y2="80" stroke="#B8976A" stroke-width="0.5" opacity="0.4"/>
+  <line x1="312" y1="90" x2="312" y2="100" stroke="#B8976A" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- X axis carriage rail -->
+  <rect x="93" y="98" width="214" height="8" fill="rgba(28,28,28,0.1)" stroke="#1C1C1C" stroke-width="0.7"/>
+
+  <!-- Print head / extruder -->
+  <rect x="176" y="88" width="48" height="26" stroke="#1C1C1C" stroke-width="1" fill="rgba(28,28,28,0.06)"/>
+  <rect x="183" y="114" width="34" height="8" stroke="#1C1C1C" stroke-width="0.7" fill="rgba(28,28,28,0.04)"/>
+  <!-- Hot end -->
+  <polygon points="195,122 205,122 202,132 198,132" stroke="#1C1C1C" stroke-width="0.8" fill="rgba(184,151,106,0.4)"/>
+  <!-- Nozzle glow -->
+  <circle cx="200" cy="133" r="2.5" fill="#B8976A" opacity="0.8"/>
+
+  <!-- Filament path -->
+  <path d="M200 74 Q226 74 226 90 L226 100" stroke="#B8976A" stroke-width="1" stroke-dasharray="3,2" fill="none" opacity="0.5"/>
+  <!-- Filament spool hint -->
+  <circle cx="226" cy="66" r="10" stroke="#B8976A" stroke-width="0.7" fill="none" opacity="0.35"/>
+  <circle cx="226" cy="66" r="4" stroke="#1C1C1C" stroke-width="0.5" fill="none" opacity="0.25"/>
+
+  <!-- Build plate -->
+  <rect x="92" y="207" width="216" height="10" stroke="#1C1C1C" stroke-width="0.8" fill="rgba(28,28,28,0.07)"/>
+  <!-- Grid on plate -->
+  <line x1="112" y1="207" x2="112" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="132" y1="207" x2="132" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="152" y1="207" x2="152" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="172" y1="207" x2="172" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="200" y1="207" x2="200" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="228" y1="207" x2="228" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="248" y1="207" x2="248" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="268" y1="207" x2="268" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="288" y1="207" x2="288" y2="217" stroke="#1C1C1C" stroke-width="0.3" opacity="0.2"/>
+
+  <!-- Printed object — layered build -->
+  <rect x="158" y="199" width="84" height="8" fill="#B8976A" opacity="0.40" stroke="#B8976A" stroke-width="0.3"/>
+  <rect x="161" y="191" width="78" height="8" fill="#B8976A" opacity="0.35" stroke="#B8976A" stroke-width="0.3"/>
+  <rect x="164" y="183" width="72" height="8" fill="#B8976A" opacity="0.30" stroke="#B8976A" stroke-width="0.3"/>
+  <rect x="167" y="175" width="66" height="8" fill="#B8976A" opacity="0.26" stroke="#B8976A" stroke-width="0.3"/>
+  <rect x="170" y="167" width="60" height="8" fill="#B8976A" opacity="0.22" stroke="#B8976A" stroke-width="0.3"/>
+  <rect x="173" y="159" width="54" height="8" fill="#B8976A" opacity="0.18" stroke="#B8976A" stroke-width="0.3"/>
+  <rect x="176" y="151" width="48" height="8" fill="#B8976A" opacity="0.15" stroke="#B8976A" stroke-width="0.3"/>
+  <rect x="179" y="143" width="42" height="8" fill="#B8976A" opacity="0.12" stroke="#B8976A" stroke-width="0.3"/>
+  <rect x="182" y="135" width="36" height="8" fill="#B8976A" opacity="0.09" stroke="#B8976A" stroke-width="0.4" stroke-dasharray="2,2"/>
+
+  <!-- Z axis arrow -->
+  <line x1="346" y1="145" x2="346" y2="207" stroke="#B8976A" stroke-width="0.9" opacity="0.6"/>
+  <polygon points="342,147 346,138 350,147" fill="#B8976A" opacity="0.6"/>
+  <text x="354" y="180" font-family="DM Sans,sans-serif" font-size="9" fill="#B8976A" opacity="0.7" letter-spacing="0.5">Z</text>
+
+  <!-- Layer height annotation -->
+  <line x1="135" y1="199" x2="135" y2="207" stroke="#B8976A" stroke-width="0.6" opacity="0.5"/>
+  <line x1="135" y1="191" x2="135" y2="199" stroke="#B8976A" stroke-width="0.6" opacity="0.4"/>
+  <line x1="130" y1="191" x2="140" y2="191" stroke="#B8976A" stroke-width="0.6" opacity="0.4"/>
+  <line x1="130" y1="199" x2="140" y2="199" stroke="#B8976A" stroke-width="0.6" opacity="0.4"/>
+  <text x="108" y="196" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#B8976A" opacity="0.7">0.2mm</text>
+
+  <!-- Title -->
+  <line x1="12" y1="228" x2="388" y2="228" stroke="#1C1C1C" stroke-width="0.4" opacity="0.18"/>
+  <text x="200" y="246" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#7A7772" letter-spacing="2.5" opacity="0.9">FDM 3D PRINTER — SECTION VIEW</text>
+</svg>

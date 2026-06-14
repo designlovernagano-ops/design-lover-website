@@ -1,0 +1,101 @@
+<svg viewBox="0 0 700 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="1000" fill="#1A1A18"/>
+
+  <!-- Engineering grid -->
+  <line x1="0" y1="100" x2="700" y2="100" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="200" x2="700" y2="200" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="300" x2="700" y2="300" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="400" x2="700" y2="400" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="500" x2="700" y2="500" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="600" x2="700" y2="600" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="700" x2="700" y2="700" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="800" x2="700" y2="800" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="900" x2="700" y2="900" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="100" y1="0" x2="100" y2="1000" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="200" y1="0" x2="200" y2="1000" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="300" y1="0" x2="300" y2="1000" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="400" y1="0" x2="400" y2="1000" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="500" y1="0" x2="500" y2="1000" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+  <line x1="600" y1="0" x2="600" y2="1000" stroke="#B8976A" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- Large mechanical gear / sprocket -->
+  <circle cx="350" cy="420" r="220" stroke="#B8976A" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <circle cx="350" cy="420" r="190" stroke="#F7F5F0" stroke-width="0.5" fill="none" opacity="0.08"/>
+  <circle cx="350" cy="420" r="140" stroke="#B8976A" stroke-width="1.2" fill="none" opacity="0.3"/>
+  <circle cx="350" cy="420" r="80" stroke="#F7F5F0" stroke-width="0.6" fill="none" opacity="0.12"/>
+  <circle cx="350" cy="420" r="36" stroke="#B8976A" stroke-width="1.5" fill="rgba(184,151,106,0.08)" opacity="0.5"/>
+  <circle cx="350" cy="420" r="12" fill="#B8976A" opacity="0.4"/>
+
+  <!-- Gear teeth (simplified) -->
+  <rect x="336" y="195" width="28" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.7" fill="rgba(247,245,240,0.05)" opacity="0.5"/>
+  <rect x="336" y="601" width="28" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.7" fill="rgba(247,245,240,0.05)" opacity="0.5"/>
+  <rect x="126" y="406" width="44" height="28" rx="2" stroke="#F7F5F0" stroke-width="0.7" fill="rgba(247,245,240,0.05)" opacity="0.5"/>
+  <rect x="530" y="406" width="44" height="28" rx="2" stroke="#F7F5F0" stroke-width="0.7" fill="rgba(247,245,240,0.05)" opacity="0.5"/>
+
+  <!-- Diagonal teeth -->
+  <rect x="193" y="253" width="28" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" opacity="0.4" transform="rotate(-45,207,275)"/>
+  <rect x="473" y="253" width="28" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" opacity="0.4" transform="rotate(45,487,275)"/>
+  <rect x="193" y="553" width="28" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" opacity="0.4" transform="rotate(45,207,575)"/>
+  <rect x="473" y="553" width="28" height="44" rx="2" stroke="#F7F5F0" stroke-width="0.6" fill="rgba(247,245,240,0.04)" opacity="0.4" transform="rotate(-45,487,575)"/>
+
+  <!-- Radial spokes -->
+  <line x1="350" y1="200" x2="350" y2="640" stroke="#F7F5F0" stroke-width="0.4" opacity="0.08"/>
+  <line x1="130" y1="420" x2="570" y2="420" stroke="#F7F5F0" stroke-width="0.4" opacity="0.08"/>
+  <line x1="194" y1="264" x2="506" y2="576" stroke="#F7F5F0" stroke-width="0.4" opacity="0.08"/>
+  <line x1="506" y1="264" x2="194" y2="576" stroke="#F7F5F0" stroke-width="0.4" opacity="0.08"/>
+
+  <!-- Bolt holes on PCD -->
+  <circle cx="350" cy="280" r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.06)" opacity="0.55"/>
+  <circle cx="476" cy="353" r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.06)" opacity="0.55"/>
+  <circle cx="476" cy="487" r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.06)" opacity="0.55"/>
+  <circle cx="350" cy="560" r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.06)" opacity="0.55"/>
+  <circle cx="224" cy="487" r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.06)" opacity="0.55"/>
+  <circle cx="224" cy="353" r="14" stroke="#B8976A" stroke-width="0.9" fill="rgba(184,151,106,0.06)" opacity="0.55"/>
+
+  <!-- PCD dimension -->
+  <circle cx="350" cy="420" r="110" stroke="#B8976A" stroke-width="0.5" stroke-dasharray="4,3" fill="none" opacity="0.3"/>
+  <line x1="350" y1="310" x2="400" y2="285" stroke="#B8976A" stroke-width="0.6" opacity="0.4"/>
+  <text x="405" y="283" font-family="DM Sans,sans-serif" font-size="9" fill="#B8976A" opacity="0.6" letter-spacing="0.5">P.C.D Ø220</text>
+
+  <!-- Outer diameter annotation -->
+  <line x1="570" y1="420" x2="630" y2="420" stroke="#B8976A" stroke-width="0.6" opacity="0.35"/>
+  <text x="634" y="423" font-family="DM Sans,sans-serif" font-size="9" fill="#B8976A" opacity="0.55" letter-spacing="0.5">Ø440</text>
+
+  <!-- Top section — Title block area -->
+  <rect x="30" y="30" width="640" height="110" stroke="#B8976A" stroke-width="0.5" fill="rgba(184,151,106,0.03)" opacity="0.5"/>
+  <line x1="30" y1="70" x2="670" y2="70" stroke="#B8976A" stroke-width="0.4" opacity="0.3"/>
+  <line x1="350" y1="30" x2="350" y2="140" stroke="#B8976A" stroke-width="0.4" opacity="0.25"/>
+
+  <text x="190" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#F7F5F0" opacity="0.55" letter-spacing="3">DESIGN LOVER</text>
+  <text x="190" y="97" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#B8976A" opacity="0.5" letter-spacing="1.5">個人設計事務所 — 長野</text>
+  <text x="510" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#F7F5F0" opacity="0.38" letter-spacing="1">SPUR GEAR ASSEMBLY</text>
+  <text x="510" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#B8976A" opacity="0.4" letter-spacing="1">DL-2024-GR-001</text>
+  <text x="510" y="97" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#F7F5F0" opacity="0.25" letter-spacing="1">SCALE 1:2</text>
+  <text x="510" y="110" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#F7F5F0" opacity="0.25" letter-spacing="1">SolidWorks 2024</text>
+
+  <!-- Bottom — Section info + coordinates -->
+  <rect x="30" y="870" width="640" height="100" stroke="#B8976A" stroke-width="0.5" fill="rgba(184,151,106,0.03)" opacity="0.5"/>
+  <line x1="30" y1="910" x2="670" y2="910" stroke="#B8976A" stroke-width="0.4" opacity="0.25"/>
+  <text x="350" y="895" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#B8976A" opacity="0.45" letter-spacing="2">35.658°N  ·  137.900°E  ·  NAGANO, JP</text>
+  <text x="350" y="930" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#F7F5F0" opacity="0.2" letter-spacing="1.5">治具設計 — 3Dプリンター造形 — CADオペレーティング</text>
+  <text x="350" y="950" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#F7F5F0" opacity="0.2" letter-spacing="1.5">SolidWorks — AutoCAD — Fusion 360</text>
+
+  <!-- Cross-hair target (decorative) -->
+  <circle cx="580" cy="800" r="60" stroke="#B8976A" stroke-width="0.6" fill="none" opacity="0.22"/>
+  <circle cx="580" cy="800" r="30" stroke="#F7F5F0" stroke-width="0.4" fill="none" opacity="0.1"/>
+  <line x1="580" y1="730" x2="580" y2="870" stroke="#B8976A" stroke-width="0.4" stroke-dasharray="4,4" opacity="0.2"/>
+  <line x1="510" y1="800" x2="650" y2="800" stroke="#B8976A" stroke-width="0.4" stroke-dasharray="4,4" opacity="0.2"/>
+  <circle cx="580" cy="800" r="4" fill="#B8976A" opacity="0.45"/>
+
+  <!-- Small gear (upper right) -->
+  <circle cx="580" cy="200" r="70" stroke="#B8976A" stroke-width="0.6" fill="none" opacity="0.2"/>
+  <circle cx="580" cy="200" r="50" stroke="#F7F5F0" stroke-width="0.4" fill="none" opacity="0.08"/>
+  <circle cx="580" cy="200" r="20" stroke="#B8976A" stroke-width="0.8" fill="rgba(184,151,106,0.06)" opacity="0.3"/>
+  <circle cx="580" cy="200" r="7" fill="#B8976A" opacity="0.25"/>
+  <line x1="580" y1="148" x2="580" y2="252" stroke="#F7F5F0" stroke-width="0.35" opacity="0.07"/>
+  <line x1="528" y1="200" x2="632" y2="200" stroke="#F7F5F0" stroke-width="0.35" opacity="0.07"/>
+
+  <!-- Mechanical pencil left -->
+  <rect x="60" y="680" width="8" height="140" rx="2" stroke="#F7F5F0" stroke-width="0.5" fill="rgba(247,245,240,0.06)" transform="rotate(8,64,750)"/>
+  <polygon points="58,816 64,830 70,816" fill="#F7F5F0" opacity="0.12" transform="rotate(8,64,823)"/>
+</svg>
