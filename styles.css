@@ -130,7 +130,7 @@ body.cursor-text .cur-ring{
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
-  padding:0 var(--gut);height:68px;
+  padding:0 var(--gut);height:80px;
   transition:background .4s,border-color .4s,box-shadow .4s;
   border-bottom:1px solid transparent;
 }
@@ -140,9 +140,9 @@ body.cursor-text .cur-ring{
   border-color:var(--border);
   box-shadow:0 1px 0 var(--border);
 }
-.nav__logo{display:flex;align-items:center;gap:10px}
-.nav__logo-mark{height:30px;width:auto}
-.nav__logo-text{height:17px;width:auto}
+.nav__logo{display:flex;align-items:center;gap:12px}
+.nav__logo-mark{height:50px;width:auto}
+.nav__logo-text{height:26px;width:auto}
 .nav__links{display:flex;gap:32px;align-items:center}
 .nav__links a{
   font-size:.82rem;font-weight:400;
@@ -308,6 +308,23 @@ body.cursor-text .cur-ring{
   50%{opacity:1;transform:scaleY(.6)}
 }
 
+/* Hero image panel */
+.hero__image{
+  position:absolute;right:0;top:0;
+  width:44%;height:100%;
+  overflow:hidden;pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.45) 28%,rgba(0,0,0,.85) 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.45) 28%,rgba(0,0,0,.85) 100%);
+  z-index:0;
+}
+.hero__image img{
+  width:100%;height:100%;object-fit:cover;
+  opacity:.18;filter:grayscale(20%);
+  transition:opacity 1s ease 1.2s;
+  display:block;
+}
+.hero.animated .hero__image img{opacity:.24}
+
 /* ============================================================
    TICKER
    ============================================================ */
@@ -404,6 +421,16 @@ body.cursor-text .cur-ring{
   font-size:.7rem;letter-spacing:.12em;
   color:var(--muted);text-transform:uppercase;
 }
+.about__image{
+  margin-top:48px;overflow:hidden;border-radius:2px;
+}
+.about__image img{
+  width:100%;max-height:300px;object-fit:cover;
+  filter:grayscale(15%);
+  transition:transform .6s var(--ease);
+  display:block;
+}
+.about__image:hover img{transform:scale(1.02)}
 
 /* ============================================================
    WORK / SERVICES
@@ -414,7 +441,7 @@ body.cursor-text .cur-ring{
 
 .work__item{
   display:grid;
-  grid-template-columns:180px 1fr 120px;
+  grid-template-columns:180px 1fr 160px;
   gap:0 48px;
   padding:56px 0;
   border-bottom:1px solid var(--border);
@@ -465,10 +492,19 @@ body.cursor-text .cur-ring{
 .work__link:hover span{transform:translateX(4px)}
 
 .work__item-icon{
-  opacity:.6;margin-top:6px;
+  opacity:.8;margin-top:6px;
   transition:opacity .3s;
+  overflow:hidden;border-radius:2px;
+  align-self:center;width:160px;height:110px;flex-shrink:0;
+}
+.work__item-icon img{
+  width:100%;height:100%;object-fit:cover;
+  filter:grayscale(20%);
+  transition:transform .5s var(--ease),filter .3s;
+  display:block;
 }
 .work__item:hover .work__item-icon{opacity:1}
+.work__item:hover .work__item-icon img{transform:scale(1.05);filter:grayscale(0%)}
 
 /* ============================================================
    PRICING
@@ -564,7 +600,7 @@ body.cursor-text .cur-ring{
 /* ============================================================
    TESTIMONIALS
    ============================================================ */
-.testi{border-top:1px solid rgba(247,245,240,.06)}
+.testi{border-top:1px solid var(--border);background:var(--bg)}
 .testi .section-title{margin-bottom:64px}
 .testi__grid{
   display:grid;grid-template-columns:repeat(3,1fr);
@@ -588,8 +624,8 @@ body.cursor-text .cur-ring{
   position:absolute;top:24px;right:28px;
 }
 .testi__text{
-  font-family:var(--f-display);font-style:italic;
-  font-size:1.02rem;line-height:1.8;color:var(--ink);
+  font-family:'Shippori Mincho','Hiragino Mincho ProN',serif;font-style:normal;
+  font-size:1rem;line-height:2;color:var(--ink);
   flex:1;
 }
 .testi__footer{
