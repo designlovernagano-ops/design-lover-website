@@ -378,25 +378,27 @@ body.cursor-text .cur-ring{
   gap:clamp(48px,8vw,120px);align-items:start;
 }
 .about__left{position:sticky;top:100px}
-.about-svg{width:100%;max-width:260px;margin-top:28px}
 
-/* SVG draw animation */
-.asvg-rect,.asvg-circle,.asvg-cross,.asvg-line,.asvg-dim{
-  stroke-dasharray:var(--len,1000);
-  stroke-dashoffset:var(--len,1000);
-  transition:stroke-dashoffset 1.2s var(--ease);
+/* About photo */
+.about__photo{
+  margin-top:28px;position:relative;
+  overflow:hidden;border-radius:2px;
+  border:1px solid var(--border);
 }
-.about__diagram.visible .asvg-rect{--len:1036;stroke-dashoffset:0}
-.about__diagram.visible .asvg-line{--len:260;stroke-dashoffset:0;transition-delay:.3s}
-.about__diagram.visible .asvg-circle{--len:440;stroke-dashoffset:0;transition-delay:.5s}
-.about__diagram.visible .asvg-circle--gold{--len:302;stroke-dashoffset:0;transition-delay:.7s}
-.about__diagram.visible .asvg-cross{--len:200;stroke-dashoffset:0;transition-delay:.9s}
-.about__diagram.visible .asvg-dim{--len:200;stroke-dashoffset:0;transition-delay:1s}
-.asvg-dot{opacity:0;transition:opacity .4s ease 1.2s}
-.about__diagram.visible .asvg-dot{opacity:1}
-.asvg-label{opacity:0;transition:opacity .4s ease 1.3s}
-.about__diagram.visible .asvg-label{opacity:.6}
-.asvg-corner{opacity:.4}
+.about__photo img{
+  width:100%;height:auto;display:block;
+  filter:grayscale(10%);
+  transition:transform .7s var(--ease),filter .4s;
+}
+.about__photo:hover img{transform:scale(1.03);filter:grayscale(0%)}
+.about__photo-cap{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:10px 14px;
+  font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(247,245,240,.75);
+  background:linear-gradient(to top,rgba(26,26,24,.55),transparent);
+  pointer-events:none;
+}
 
 .about__title{
   font-family:var(--f-display);
