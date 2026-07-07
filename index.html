@@ -444,6 +444,11 @@
   </div>
 </section>
 
+<!-- BACK TO TOP -->
+<button class="to-top" id="toTop" aria-label="ページ上部へ戻る">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4" stroke="#B8976A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer__inner">
@@ -657,6 +662,44 @@
       el.style.transition = 'transform .15s linear';
     });
   });
+
+  /* ── Hero mouse parallax ── */
+  const heroBg = document.querySelector('.hero__bg');
+  const heroImg = document.querySelector('.hero__image');
+  const heroSec = document.getElementById('hero');
+  let px = 0, py = 0, tx = 0, ty = 0;
+  heroSec.addEventListener('mousemove', e => {
+    tx = (e.clientX / window.innerWidth  - 0.5);
+    ty = (e.clientY / window.innerHeight - 0.5);
+  });
+  function animParallax() {
+    px = lerp(px, tx, 0.06);
+    py = lerp(py, ty, 0.06);
+    if (heroBg)  heroBg.style.transform  = `translate(${px * 18}px, ${py * 14}px)`;
+    if (heroImg) heroImg.style.transform = `translate(${px * -12}px, ${py * -10}px)`;
+    requestAnimationFrame(animParallax);
+  }
+  if (matchMedia('(hover:hover)').matches) animParallax();
+
+  /* ── Hero scroll depth (sink & fade) ── */
+  const heroContent = document.querySelector('.hero__content');
+  function heroDepth() {
+    const y = window.scrollY;
+    const h = window.innerHeight;
+    if (y < h && heroContent) {
+      const p = y / h;
+      heroContent.style.transform = `translateY(${y * 0.22}px)`;
+      heroContent.style.opacity = 1 - p * 1.1;
+    }
+  }
+
+  /* ── Back to top ── */
+  const toTop = document.getElementById('toTop');
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  function toTopVis() {
+    toTop.classList.toggle('to-top--visible', window.scrollY > window.innerHeight);
+  }
+  window.addEventListener('scroll', () => { heroDepth(); toTopVis(); }, { passive: true });
 
   /* ── Contact form submit ── */
   document.getElementById('contactForm').addEventListener('submit', function(e) {
