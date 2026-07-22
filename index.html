@@ -1,699 +1,262 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Design Lover — 思いをカタチに</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="長野の個人設計事務所 Design Lover。治具・装置設計、3Dプリンター造形、CAD業務で、つくりたいを実現します。">
+  <title>Design Lover | 長野の個人設計事務所</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="is-loading">
-
-<!-- ============================================================
-     PRELOADER
-     ============================================================ -->
-<div class="loader" id="loader">
-  <div class="loader__frame">
-    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect class="loader__rect" x="1" y="1" width="118" height="118" stroke="#B8976A" stroke-width="0.6"/>
-      <circle class="loader__circle" cx="60" cy="60" r="28" stroke="rgba(247,245,240,0.25)" stroke-width="0.6"/>
-      <line x1="60" y1="32" x2="60" y2="88" stroke="rgba(247,245,240,0.12)" stroke-width="0.4" stroke-dasharray="3,4"/>
-      <line x1="32" y1="60" x2="88" y2="60" stroke="rgba(247,245,240,0.12)" stroke-width="0.4" stroke-dasharray="3,4"/>
-      <circle class="loader__dot" cx="60" cy="60" r="3" fill="#B8976A"/>
-    </svg>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark"><span>D</span><span>L</span></div>
+    <p>DESIGN LOVER</p>
+    <div class="loader__line"><span></span></div>
   </div>
-  <p class="loader__label">Design Lover</p>
-  <div class="loader__bar-wrap"><div class="loader__bar"></div></div>
-</div>
+  <div class="cur-dot" id="curDot"></div>
+  <div class="cur-ring" id="curRing"></div>
+  <div class="scroll-track" id="scrollTrack"></div>
 
-<!-- CURSOR -->
-<div class="cur-dot" id="curDot"></div>
-<div class="cur-ring" id="curRing"></div>
-
-<!-- SCROLL PROGRESS -->
-<div class="scroll-track" id="scrollTrack"></div>
-
-<!-- ============================================================
-     NAV
-     ============================================================ -->
-<nav class="nav" id="nav">
-  <a href="#" class="nav__logo">
-    <img src="logo-mark-t.png" alt="Design Lover" class="nav__logo-mark">
-    <img src="logo-text-t.png" alt="Design Lover" class="nav__logo-text">
-  </a>
-  <div class="nav__links" id="navLinks">
-    <a href="#work">サービス</a>
-    <a href="#about">について</a>
-    <a href="#pricing">料金</a>
-    <a href="#contact" class="nav__cta">連絡</a>
-  </div>
-  <button class="nav__burger" id="burger" aria-label="メニュー">
-    <span></span><span></span>
-  </button>
-</nav>
-
-<!-- ============================================================
-     HERO
-     ============================================================ -->
-<section class="hero" id="hero">
-  <!-- Animated engineering grid -->
-  <div class="hero__bg" aria-hidden="true">
-    <svg class="hero__grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <!-- Vertical grid lines -->
-      <line class="g-line" x1="120" y1="0" x2="120" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="240" y1="0" x2="240" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="360" y1="0" x2="360" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="480" y1="0" x2="480" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="600" y1="0" x2="600" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="720" y1="0" x2="720" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="840" y1="0" x2="840" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="960" y1="0" x2="960" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="1080" y1="0" x2="1080" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="1200" y1="0" x2="1200" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="1320" y1="0" x2="1320" y2="900" stroke="#1C1C1C" stroke-width="0.4"/>
-      <!-- Horizontal grid lines -->
-      <line class="g-line" x1="0" y1="150" x2="1440" y2="150" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="0" y1="300" x2="1440" y2="300" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="0" y1="450" x2="1440" y2="450" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="0" y1="600" x2="1440" y2="600" stroke="#1C1C1C" stroke-width="0.4"/>
-      <line class="g-line" x1="0" y1="750" x2="1440" y2="750" stroke="#1C1C1C" stroke-width="0.4"/>
-      <!-- Gold dimension annotations -->
-      <line class="g-accent" x1="80" y1="64" x2="380" y2="64" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
-      <line class="g-accent" x1="80" y1="60" x2="80" y2="68" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
-      <line class="g-accent" x1="380" y1="60" x2="380" y2="68" stroke="#B8976A" stroke-width="0.6" opacity="0"/>
-      <text class="g-label" x="86" y="57" font-family="DM Sans" font-size="8" fill="#B8976A" opacity="0" letter-spacing="1.5">280.0mm</text>
-      <!-- Target circle bottom-right -->
-      <circle class="g-circle" cx="1200" cy="600" r="80" stroke="#B8976A" stroke-width="0.5" fill="none" opacity="0"/>
-      <circle class="g-circle" cx="1200" cy="600" r="40" stroke="#1C1C1C" stroke-width="0.4" fill="none" opacity="0"/>
-      <line class="g-cross" x1="1200" y1="520" x2="1200" y2="680" stroke="#1C1C1C" stroke-width="0.3" stroke-dasharray="3,4" opacity="0"/>
-      <line class="g-cross" x1="1120" y1="600" x2="1280" y2="600" stroke="#1C1C1C" stroke-width="0.3" stroke-dasharray="3,4" opacity="0"/>
-      <circle class="g-centerdot" cx="1200" cy="600" r="3" fill="#B8976A" opacity="0"/>
-      <!-- Coordinates -->
-      <text class="g-coord" x="1310" y="28" font-family="DM Sans" font-size="9" fill="#B8976A" opacity="0" letter-spacing="1">35.658°N</text>
-      <text class="g-coord" x="1310" y="44" font-family="DM Sans" font-size="9" fill="#B8976A" opacity="0" letter-spacing="1">137.900°E</text>
-    </svg>
-  </div>
-
-  <div class="hero__content">
-    <p class="hero__eyebrow" id="heroEyebrow" aria-label="Design Lover — 個人設計事務所"></p>
-    <h1 class="hero__title">
-      <span class="hero__line"><span class="hero__word">思いを<span class="hero__comma">、</span></span></span>
-      <span class="hero__line"><em class="hero__word hero__em">カタチに。</em></span>
-    </h1>
-    <div class="hero__sub-wrap">
-      <p class="hero__sub">治具設計から3Dプリンター造形まで。<br>あなたのアイデアに、精度を与える。</p>
-    </div>
-    <div class="hero__actions">
-      <a href="#contact" class="btn btn--primary" data-magnetic>
-        <span>相談する</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#work" class="btn btn--ghost" data-magnetic>
-        <span>サービスを見る</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="hero__image" aria-hidden="true">
-    <img src="img-hero.svg" alt="" loading="lazy">
-  </div>
-
-  <div class="hero__meta" aria-hidden="true">
-    <span class="hero__meta-item">35.658°N</span>
-    <span class="hero__meta-sep">·</span>
-    <span class="hero__meta-item">137.900°E</span>
-    <span class="hero__meta-sep">·</span>
-    <span class="hero__meta-item">Nagano, JP</span>
-  </div>
-
-  <div class="hero__scroll-hint" aria-hidden="true">
-    <div class="hero__scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- TICKER -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track">
-    <div class="ticker__inner">
-      <span>治具・装置設計</span><span class="ticker__sep">—</span>
-      <span>3Dプリンター造形</span><span class="ticker__sep">—</span>
-      <span>CADオペレーティング</span><span class="ticker__sep">—</span>
-      <span>設計リソース支援</span><span class="ticker__sep">—</span>
-      <span>試作・少量生産</span><span class="ticker__sep">—</span>
-      <span>SolidWorks</span><span class="ticker__sep">—</span>
-      <span>AutoCAD</span><span class="ticker__sep">—</span>
-      <span>Fusion 360</span><span class="ticker__sep">—</span>
-      <span>治具・装置設計</span><span class="ticker__sep">—</span>
-      <span>3Dプリンター造形</span><span class="ticker__sep">—</span>
-      <span>CADオペレーティング</span><span class="ticker__sep">—</span>
-      <span>設計リソース支援</span><span class="ticker__sep">—</span>
-      <span>試作・少量生産</span><span class="ticker__sep">—</span>
-      <span>SolidWorks</span><span class="ticker__sep">—</span>
-      <span>AutoCAD</span><span class="ticker__sep">—</span>
-      <span>Fusion 360</span><span class="ticker__sep">—</span>
-    </div>
-  </div>
-</div>
-
-<!-- ============================================================
-     ABOUT
-     ============================================================ -->
-<section class="about section" id="about">
-  <div class="about__inner container">
-    <div class="about__left">
-      <p class="eyebrow reveal-up">About</p>
-      <figure class="about__photo reveal-up">
-        <img src="about-photo.jpg" alt="設計デスク — CADモデル、治具、ノギス、3Dプリンター" loading="lazy">
-        <figcaption class="about__photo-cap" aria-hidden="true">WORKSPACE — NAGANO</figcaption>
-      </figure>
-    </div>
-    <div class="about__right">
-      <h2 class="about__title reveal-up">設計とは、<br>問いに答えを<br>刻む仕事だ。</h2>
-      <p class="about__body reveal-up">Design Lover は、長野を拠点とする個人設計事務所です。治具・専用装置の設計、3Dプリンターによる試作造形、CAD代行業務を通じて、中小企業の「設計リソース不足」と個人の「アイデアをカタチにしたい」という両方の需要に応えます。</p>
-      <p class="about__body reveal-up">大きな組織より小さく動ける。だからこそ、あなたの課題に直接向き合えます。</p>
-      <div class="about__stats reveal-up">
-        <div class="about__stat">
-          <span class="about__stat-num" data-counter="50" data-suffix="+">0</span>
-          <span class="about__stat-label">対応実績</span>
-        </div>
-        <div class="about__stat">
-          <span class="about__stat-num" data-counter="5" data-suffix="yr">0</span>
-          <span class="about__stat-label">設計経験</span>
-        </div>
-        <div class="about__stat">
-          <span class="about__stat-num" data-counter="3" data-suffix="day">0</span>
-          <span class="about__stat-label">最短納期</span>
-        </div>
-      </div>
-      <figure class="about__image reveal-up">
-        <img src="img-about.svg" alt="Design Lover 作業風景" loading="lazy">
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SERVICES
-     ============================================================ -->
-<section class="work section" id="work">
-  <div class="work__header container reveal-up">
-    <p class="eyebrow">Services</p>
-    <h2 class="section-title">できること</h2>
-  </div>
-  <div class="work__list container">
-
-    <div class="work__item reveal-up">
-      <div class="work__item-meta">
-        <span class="work__num">01</span>
-        <span class="work__tag">Jig & Device</span>
-      </div>
-      <div class="work__item-content">
-        <h3 class="work__item-title">治具・装置設計</h3>
-        <p class="work__item-body">検査治具、組立治具、省力化装置など。製造ラインの課題を構造から解決します。要件定義からCAD図面・3Dモデルまで一気通貫。</p>
-        <a href="#contact" class="work__link">詳しく相談 <span>→</span></a>
-      </div>
-      <div class="work__item-icon" aria-hidden="true">
-        <img src="img-jig.svg" alt="" loading="lazy">
-      </div>
-    </div>
-
-    <div class="work__item reveal-up">
-      <div class="work__item-meta">
-        <span class="work__num">02</span>
-        <span class="work__tag">3D Print</span>
-      </div>
-      <div class="work__item-content">
-        <h3 class="work__item-title">3Dプリンター造形</h3>
-        <p class="work__item-body">スケッチや仕様書から3Dデータを起こし、試作品をお届けします。最短3日。アイデアを手で触れる形に。</p>
-        <a href="#contact" class="work__link">詳しく相談 <span>→</span></a>
-      </div>
-      <div class="work__item-icon" aria-hidden="true">
-        <img src="img-print.svg" alt="" loading="lazy">
-      </div>
-    </div>
-
-    <div class="work__item reveal-up">
-      <div class="work__item-meta">
-        <span class="work__num">03</span>
-        <span class="work__tag">CAD Operation</span>
-      </div>
-      <div class="work__item-content">
-        <h3 class="work__item-title">CADオペレーティング</h3>
-        <p class="work__item-body">SolidWorks・AutoCAD・Fusion 360 対応。手書き図面のCAD化、既存データの修正・整備、フォーマット変換など。</p>
-        <a href="#contact" class="work__link">詳しく相談 <span>→</span></a>
-      </div>
-      <div class="work__item-icon" aria-hidden="true">
-        <img src="img-cad.svg" alt="" loading="lazy">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============================================================
-     PRICING
-     ============================================================ -->
-<section class="pricing section" id="pricing">
-  <div class="pricing__inner container">
-    <div class="pricing__header">
-      <p class="eyebrow reveal-up">Pricing</p>
-      <h2 class="section-title pricing__title reveal-up">料金</h2>
-      <p class="pricing__note-top reveal-up">見積もり・相談は無料。まず話しましょう。</p>
-    </div>
-    <div class="pricing__grid">
-
-      <div class="pricing__card reveal-up" data-tilt>
-        <div class="pricing__card-bg"></div>
-        <div class="pricing__card-content">
-          <div class="pricing__card-head">
-            <p class="pricing__plan">Spot</p>
-            <p class="pricing__price">¥5,000<span>/h〜</span></p>
-          </div>
-          <p class="pricing__desc">初回相談・スポット依頼向け。「これ、できる？」から始められます。</p>
-          <ul class="pricing__list">
-            <li>要件ヒアリング</li>
-            <li>実現可能性の確認</li>
-            <li>概算費用の提示</li>
-            <li>オンライン対応可</li>
-          </ul>
-          <a href="#contact" class="pricing__btn">相談する</a>
-        </div>
-      </div>
-
-      <div class="pricing__card pricing__card--featured reveal-up" data-tilt>
-        <div class="pricing__card-bg"></div>
-        <div class="pricing__card-content">
-          <div class="pricing__badge">おすすめ</div>
-          <div class="pricing__card-head">
-            <p class="pricing__plan">Project</p>
-            <p class="pricing__price">見積もり</p>
-          </div>
-          <p class="pricing__desc">1案件ごとの依頼。内容・規模に応じて個別お見積もりします。</p>
-          <ul class="pricing__list">
-            <li>治具・装置設計</li>
-            <li>3Dプリンター造形</li>
-            <li>CADデータ作成</li>
-            <li>修正2回まで込み</li>
-          </ul>
-          <a href="#contact" class="pricing__btn pricing__btn--featured">見積もりを依頼</a>
-        </div>
-      </div>
-
-      <div class="pricing__card reveal-up" data-tilt>
-        <div class="pricing__card-bg"></div>
-        <div class="pricing__card-content">
-          <div class="pricing__card-head">
-            <p class="pricing__plan">Retainer</p>
-            <p class="pricing__price">¥30,000<span>/月〜</span></p>
-          </div>
-          <p class="pricing__desc">設計リソースが足りない企業向け。月単位で設計業務を支援します。</p>
-          <ul class="pricing__list">
-            <li>月次設計作業（時間制）</li>
-            <li>優先対応・即日レス</li>
-            <li>複数案件同時進行</li>
-            <li>定例MTG込み</li>
-          </ul>
-          <a href="#contact" class="pricing__btn">問い合わせる</a>
-        </div>
-      </div>
-
-    </div>
-    <p class="pricing__note-bottom">※ 価格は税抜き表示。内容により変動します。</p>
-  </div>
-</section>
-
-<!-- ============================================================
-     TESTIMONIALS
-     ============================================================ -->
-<section class="testi section" id="voices">
-  <div class="testi__inner container">
-    <p class="eyebrow reveal-up">Voices</p>
-    <h2 class="section-title testi__title reveal-up">お客様の声</h2>
-    <div class="testi__grid">
-      <div class="testi__card reveal-up">
-        <div class="testi__quote" aria-hidden="true">"</div>
-        <p class="testi__text">設計者の退職直後に依頼しました。品質が高く、工場からも太鼓判。頼れる外部の設計者ができた感覚です。</p>
-        <footer class="testi__footer">
-          <div class="testi__avatar" aria-hidden="true">M</div>
-          <div>
-            <p class="testi__name">M.T.</p>
-            <p class="testi__role">製造業・30名</p>
-          </div>
-        </footer>
-      </div>
-      <div class="testi__card reveal-up">
-        <div class="testi__quote" aria-hidden="true">"</div>
-        <p class="testi__text">スケッチを送ったら3日で試作品が届いた。思っていたより遥かに精度が高くて驚いた。</p>
-        <footer class="testi__footer">
-          <div class="testi__avatar" aria-hidden="true">K</div>
-          <div>
-            <p class="testi__name">K.S.</p>
-            <p class="testi__role">個人・DIYクリエイター</p>
-          </div>
-        </footer>
-      </div>
-      <div class="testi__card reveal-up">
-        <div class="testi__quote" aria-hidden="true">"</div>
-        <p class="testi__text">古い図面の整備とデータ変換をまとめて依頼。専門的な内容でも確認を挟みながら丁寧に進めてもらえた。</p>
-        <footer class="testi__footer">
-          <div class="testi__avatar" aria-hidden="true">A</div>
-          <div>
-            <p class="testi__name">A.N.</p>
-            <p class="testi__role">機械部品メーカー・15名</p>
-          </div>
-        </footer>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     CONTACT
-     ============================================================ -->
-<section class="contact section" id="contact">
-  <div class="contact__inner container">
-    <div class="contact__left">
-      <p class="eyebrow reveal-up">Contact</p>
-      <h2 class="contact__title reveal-up">あなたの課題を、<br><em>聞かせてください。</em></h2>
-      <p class="contact__body reveal-up">まずは気軽に。どんな小さな相談でも歓迎します。見積もりは無料です。</p>
-      <div class="contact__meta reveal-up">
-        <div class="contact__meta-item">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#B8976A" stroke-width="0.8"/><circle cx="7" cy="7" r="2" fill="#B8976A" opacity="0.6"/></svg>
-          <span>Nagano, Japan</span>
-        </div>
-        <div class="contact__meta-item">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 3h12v8H1z" stroke="#B8976A" stroke-width="0.8"/><path d="M1 3l6 5 6-5" stroke="#B8976A" stroke-width="0.8"/></svg>
-          <span>返信まで通常24h以内</span>
-        </div>
-      </div>
-    </div>
-    <form class="contact__form reveal-up" id="contactForm" novalidate>
-      <div class="field">
-        <label class="field__label" for="c-name">名前 <span>*</span></label>
-        <input class="field__input" type="text" id="c-name" placeholder="山田 太郎" required/>
-      </div>
-      <div class="field">
-        <label class="field__label" for="c-company">会社名・屋号</label>
-        <input class="field__input" type="text" id="c-company" placeholder="任意"/>
-      </div>
-      <div class="field">
-        <label class="field__label" for="c-email">メール <span>*</span></label>
-        <input class="field__input" type="email" id="c-email" placeholder="your@email.com" required/>
-      </div>
-      <div class="field">
-        <label class="field__label" for="c-type">相談の種類 <span>*</span></label>
-        <select class="field__input field__select" id="c-type" required>
-          <option value="" disabled selected>選択してください</option>
-          <option>治具・装置設計</option>
-          <option>3Dプリンター造形</option>
-          <option>CADオペレーティング</option>
-          <option>継続サポート</option>
-          <option>その他</option>
-        </select>
-      </div>
-      <div class="field">
-        <label class="field__label" for="c-msg">メッセージ <span>*</span></label>
-        <textarea class="field__input field__textarea" id="c-msg" placeholder="どんな些細なことでもどうぞ。" required></textarea>
-      </div>
-      <button type="submit" class="contact__submit" data-magnetic>
-        <span class="submit__text">送信する</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </form>
-  </div>
-</section>
-
-<!-- BACK TO TOP -->
-<button class="to-top" id="toTop" aria-label="ページ上部へ戻る">
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4" stroke="#B8976A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</button>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__left">
-      <div class="footer__logo">
-        <img src="logo-mark-t.png" alt="DL" class="footer__logo-mark">
-        <img src="logo-text-t.png" alt="Design Lover" class="footer__logo-text">
-      </div>
-      <p class="footer__tagline">思いを、カタチに。</p>
-      <p class="footer__copy">© 2025 Design Lover. All rights reserved.</p>
-    </div>
-    <nav class="footer__nav" aria-label="フッターナビ">
-      <a href="#work">サービス</a>
-      <a href="#about">について</a>
-      <a href="#pricing">料金</a>
-      <a href="#contact">連絡</a>
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo" aria-label="Design Lover トップへ">
+      <img src="logo-mark-t.png" alt="" class="nav__logo-mark">
+      <span class="nav__logo-word">DESIGN<br>LOVER</span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="メインナビゲーション">
+      <a href="#about"><span>01</span> 私たちについて</a>
+      <a href="#work"><span>02</span> できること</a>
+      <a href="#pricing"><span>03</span> 料金</a>
+      <a href="#contact" class="nav__contact">相談する</a>
     </nav>
-  </div>
-</footer>
+    <button class="nav__burger" id="burger" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
+  </header>
 
-<!-- ============================================================
-     SCRIPTS
-     ============================================================ -->
-<script>
-(function () {
-  'use strict';
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__media" aria-hidden="true"><img src="hero-engineering.png" alt=""></div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__rail" aria-hidden="true"><span>35.658°N</span><span>NAGANO / JAPAN</span><span>137.900°E</span></div>
+      <div class="hero__content">
+        <p class="hero__kicker">MECHANICAL DESIGN STUDIO / NAGANO</p>
+        <h1 class="hero__title"><span>設計の力で、</span><span><em>現場を前へ。</em></span></h1>
+        <div class="hero__bottom">
+          <p class="hero__lead">治具・装置設計から3Dプリンター試作まで。<br>つくりたいを、使えるカタチにします。</p>
+          <a href="#contact" class="circle-link" data-magnetic><span>無料で<br>相談する</span><span class="circle-link__arrow">↗</span></a>
+        </div>
+      </div>
+      <div class="hero__brand" aria-hidden="true">DESIGN LOVER</div>
+      <a href="#intro" class="hero__scroll">SCROLL <span></span></a>
+    </section>
 
-  /* ── Preloader ── */
-  const loader = document.getElementById('loader');
-  function hideLoader() {
-    loader.classList.add('done');
-    document.body.classList.remove('is-loading');
-    // trigger hero animations
-    setTimeout(() => {
-      const hero = document.getElementById('hero');
-      hero.classList.add('animated');
-    }, 200);
-  }
-  // Hide after font + minimum time
-  const MIN_LOAD = 1600;
-  const t0 = Date.now();
-  if (document.fonts) {
-    document.fonts.ready.then(() => {
-      const elapsed = Date.now() - t0;
-      setTimeout(hideLoader, Math.max(0, MIN_LOAD - elapsed));
+    <section class="intro" id="intro">
+      <p class="intro__label reveal-up">OUR APPROACH</p>
+      <div class="intro__copy reveal-up"><p>図面の先にある、</p><p>使う人と現場まで考える。</p></div>
+      <p class="intro__body reveal-up">課題の整理、構想、設計、試作。小さく素早く動ける個人設計事務所だからこそ、相談の入口から完成まで、同じ目線で伴走します。</p>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>PRECISION INTO FORM</span><i>✳</i><span>PRECISION INTO FORM</span><i>✳</i><span>PRECISION INTO FORM</span><i>✳</i><span>PRECISION INTO FORM</span><i>✳</i></div></div>
+
+    <section class="about section" id="about">
+      <div class="section-index reveal-up"><span>01</span><span>ABOUT</span></div>
+      <div class="about__grid">
+        <div class="about__visual reveal-up">
+          <figure class="about__photo"><img src="about-photo.jpg" alt="Design Loverの設計デスク"></figure>
+          <p class="about__caption">WORKSPACE / NAGANO / JAPAN</p>
+        </div>
+        <div class="about__content">
+          <h2 class="about__title reveal-up">設計とは、<br>問いに答えを<br><em>刻む仕事だ。</em></h2>
+          <p class="about__body reveal-up">Design Loverは、長野を拠点とする個人設計事務所です。治具・専用装置の設計、3Dプリンターによる試作造形、CAD業務を通じて、中小企業の「設計リソース不足」と個人の「アイデアをカタチにしたい」に応えます。</p>
+          <p class="about__body reveal-up">大きな組織より小さく動ける。だからこそ、あなたの課題に直接向き合えます。</p>
+          <div class="about__stats reveal-up">
+            <div><strong data-counter="50" data-suffix="+">0</strong><span>対応実績</span></div>
+            <div><strong data-counter="5" data-suffix="yr">0</strong><span>設計経験</span></div>
+            <div><strong data-counter="3" data-suffix="day">0</strong><span>最短納期</span></div>
+          </div>
+        </div>
+      </div>
+      <figure class="about__drawing reveal-up"><img src="img-about.svg" alt="治具のアイソメ組立図"><figcaption>EXPLODED ASSEMBLY / ISO VIEW / DL-2024-ASM-003</figcaption></figure>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="work__head">
+        <div class="section-index section-index--light reveal-up"><span>02</span><span>SERVICES</span></div>
+        <h2 class="work__headline reveal-up">設計から試作まで、<br><em>ひとつながりで。</em></h2>
+      </div>
+      <article class="service reveal-up">
+        <div class="service__meta"><span>01</span><span>JIG &amp; DEVICE</span></div>
+        <div class="service__visual"><img src="img-jig.svg" alt="治具設計の技術図面"></div>
+        <div class="service__content"><h3>治具・装置設計</h3><p>検査治具、組立治具、省力化装置など。製造ラインの課題を構造から解決します。要件定義からCAD図面・3Dモデルまで一気通貫で対応します。</p><a href="#contact">この内容を相談する <span>↗</span></a></div>
+      </article>
+      <article class="service service--reverse reveal-up">
+        <div class="service__meta"><span>02</span><span>3D PRINT</span></div>
+        <div class="service__visual"><img src="img-print.svg" alt="3Dプリンター造形の技術図"></div>
+        <div class="service__content"><h3>3Dプリンター造形</h3><p>スケッチや仕様書から3Dデータを起こし、試作品をお届けします。最短3日。アイデアを手で触れ、確かめられるカタチにします。</p><a href="#contact">この内容を相談する <span>↗</span></a></div>
+      </article>
+      <article class="service reveal-up">
+        <div class="service__meta"><span>03</span><span>CAD OPERATION</span></div>
+        <div class="service__visual"><img src="img-cad.svg" alt="CAD図面作成のイメージ"></div>
+        <div class="service__content"><h3>CADオペレーティング</h3><p>SolidWorks・AutoCAD・Fusion 360に対応。手書き図面のCAD化、既存データの修正・整備、フォーマット変換などを承ります。</p><a href="#contact">この内容を相談する <span>↗</span></a></div>
+      </article>
+    </section>
+
+    <section class="process section" id="process">
+      <div class="section-index reveal-up"><span>03</span><span>PROCESS</span></div>
+      <div class="process__top"><h2 class="process__title reveal-up">相談から完成まで、<br>同じ設計者が向き合います。</h2><p class="process__lead reveal-up">言葉になっていない課題でも構いません。目的と使われ方を整理し、最適な進め方をご提案します。</p></div>
+      <ol class="process__list">
+        <li class="reveal-up"><span>01</span><strong>聞く</strong><p>課題・用途・条件を整理</p></li>
+        <li class="reveal-up"><span>02</span><strong>考える</strong><p>構造と実現方法を検討</p></li>
+        <li class="reveal-up"><span>03</span><strong>設計する</strong><p>図面と3Dモデルを作成</p></li>
+        <li class="reveal-up"><span>04</span><strong>カタチにする</strong><p>試作・検証・納品まで</p></li>
+      </ol>
+    </section>
+
+    <section class="pricing section" id="pricing">
+      <div class="section-index section-index--light reveal-up"><span>04</span><span>PRICING</span></div>
+      <div class="pricing__heading"><h2 class="pricing__title reveal-up">まずは、<br><em>話すところから。</em></h2><p class="pricing__intro reveal-up">見積もり・相談は無料です。内容や規模に合わせて、無理のない依頼方法をご案内します。</p></div>
+      <div class="pricing__list">
+        <article class="price-row reveal-up"><span class="price-row__num">01</span><div><p class="price-row__en">SPOT</p><h3>スポット相談</h3></div><p>初回相談、小さな修正、短時間のCAD作業など。「これ、できる？」から始められます。</p><strong>¥5,000<small>/h〜</small></strong></article>
+        <article class="price-row price-row--accent reveal-up"><span class="price-row__num">02</span><div><p class="price-row__en">PROJECT</p><h3>案件ごとの依頼</h3></div><p>治具・装置設計、3Dプリンター造形、CADデータ作成。内容に応じて個別にお見積もりします。</p><strong>お見積もり</strong></article>
+        <article class="price-row reveal-up"><span class="price-row__num">03</span><div><p class="price-row__en">RETAINER</p><h3>継続サポート</h3></div><p>設計リソースが足りない企業向け。月単位で設計業務を支援し、優先して対応します。</p><strong>¥30,000<small>/月〜</small></strong></article>
+      </div>
+      <p class="pricing__tax">※価格は税抜き表示。内容により変動します。</p>
+    </section>
+
+    <section class="voices section" id="voices">
+      <div class="section-index reveal-up"><span>05</span><span>VOICES</span></div>
+      <h2 class="voices__title reveal-up">仕事の答えは、<br><em>使う人の声にある。</em></h2>
+      <div class="voices__list">
+        <blockquote class="voice reveal-up"><p>設計者の退職直後に依頼しました。品質が高く、工場からも太鼓判。頼れる外部の設計者ができた感覚です。</p><footer><span>M.T.</span><span>製造業・30名</span></footer></blockquote>
+        <blockquote class="voice reveal-up"><p>スケッチを送ったら3日で試作品が届いた。思っていたより遥かに精度が高くて驚きました。</p><footer><span>K.S.</span><span>個人・DIYクリエイター</span></footer></blockquote>
+        <blockquote class="voice reveal-up"><p>古い図面の整備とデータ変換をまとめて依頼。専門的な内容でも確認を挟みながら丁寧に進めてもらえました。</p><footer><span>A.N.</span><span>機械部品メーカー・15名</span></footer></blockquote>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact__header">
+        <div class="section-index section-index--light reveal-up"><span>06</span><span>CONTACT</span></div>
+        <h2 class="contact__title reveal-up">あなたの課題を、<br><em>聞かせてください。</em></h2>
+        <p class="contact__lead reveal-up">まだ仕様が決まっていなくても大丈夫です。<br>小さな相談から、お気軽にご連絡ください。</p>
+      </div>
+      <form class="contact__form reveal-up" id="contactForm" novalidate>
+        <div class="field field--half"><label for="c-name">お名前 <span>*</span></label><input type="text" id="c-name" name="name" autocomplete="name" required></div>
+        <div class="field field--half"><label for="c-company">会社名・屋号</label><input type="text" id="c-company" name="company" autocomplete="organization"></div>
+        <div class="field field--half"><label for="c-email">メールアドレス <span>*</span></label><input type="email" id="c-email" name="email" autocomplete="email" required></div>
+        <div class="field field--half"><label for="c-type">ご相談内容 <span>*</span></label><select id="c-type" name="type" required><option value="" selected disabled>選択してください</option><option>治具・装置設計</option><option>3Dプリンター造形</option><option>CADオペレーティング</option><option>継続サポート</option><option>その他</option></select></div>
+        <div class="field"><label for="c-msg">メッセージ <span>*</span></label><textarea id="c-msg" name="message" rows="5" required></textarea></div>
+        <div class="contact__form-bottom"><p>NAGANO, JAPAN<br>通常24時間以内に返信します</p><button type="submit" class="contact__submit" data-magnetic><span class="submit__text">送信する</span><span>↗</span></button></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top"><p>思いを、<br><em>カタチに。</em></p><div class="footer__brand">DESIGN LOVER</div></div>
+    <div class="footer__bottom"><p>© 2026 DESIGN LOVER</p><nav aria-label="フッターナビ"><a href="#about">ABOUT</a><a href="#work">SERVICES</a><a href="#pricing">PRICING</a><a href="#contact">CONTACT</a></nav><a href="#hero">BACK TO TOP ↑</a></div>
+  </footer>
+
+  <script>
+  (() => {
+    'use strict';
+    const loader = document.getElementById('loader');
+    const hero = document.getElementById('hero');
+    let loaded = false;
+    const finishLoading = () => {
+      if (loaded) return;
+      loaded = true;
+      loader.classList.add('done');
+      document.body.classList.remove('is-loading');
+      requestAnimationFrame(() => hero.classList.add('animated'));
+    };
+    window.addEventListener('load', () => setTimeout(finishLoading, 900), { once: true });
+    setTimeout(finishLoading, 2500);
+
+    const nav = document.getElementById('nav');
+    const progress = document.getElementById('scrollTrack');
+    const heroMedia = document.querySelector('.hero__media img');
+    const onScroll = () => {
+      const y = window.scrollY;
+      nav.classList.toggle('nav--scrolled', y > 60);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = `${max > 0 ? y / max * 100 : 0}%`;
+      if (heroMedia && y < window.innerHeight) heroMedia.style.transform = `scale(1.06) translateY(${y * .06}px)`;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('nav__links--open');
+      burger.classList.toggle('nav__burger--open', open);
+      burger.setAttribute('aria-expanded', String(open));
     });
-  } else {
-    setTimeout(hideLoader, MIN_LOAD);
-  }
-
-  /* ── Eyebrow character reveal ── */
-  const eyebrowEl = document.getElementById('heroEyebrow');
-  const eyebrowText = 'Design Lover — 個人設計事務所';
-  eyebrowText.split('').forEach((ch, i) => {
-    const s = document.createElement('span');
-    s.className = 'reveal-char';
-    s.style.transitionDelay = (0.05 * i + 0.3) + 's';
-    s.textContent = ch === ' ' ? ' ' : ch;
-    eyebrowEl.appendChild(s);
-  });
-
-  /* ── Custom Cursor ── */
-  const curDot = document.getElementById('curDot');
-  const curRing = document.getElementById('curRing');
-  let mx = -100, my = -100, rx = -100, ry = -100;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    curDot.style.left = mx + 'px';
-    curDot.style.top  = my + 'px';
-  });
-
-  // Smooth ring follow with lerp
-  function lerp(a, b, t) { return a + (b - a) * t; }
-  function animCursor() {
-    rx = lerp(rx, mx, 0.12);
-    ry = lerp(ry, my, 0.12);
-    curRing.style.left = rx + 'px';
-    curRing.style.top  = ry + 'px';
-    requestAnimationFrame(animCursor);
-  }
-  animCursor();
-
-  // Hover states
-  document.querySelectorAll('a, button, [data-magnetic]').forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-  });
-  document.querySelectorAll('p, h1, h2, h3, .testi__text').forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-text'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-text'));
-  });
-
-  /* ── Scroll Progress Bar ── */
-  const scrollTrack = document.getElementById('scrollTrack');
-  function updateProgress() {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    scrollTrack.style.width = (window.scrollY / max * 100) + '%';
-  }
-
-  /* ── Nav scroll ── */
-  const nav = document.getElementById('nav');
-  function onScroll() {
-    nav.classList.toggle('nav--scrolled', window.scrollY > 60);
-    updateProgress();
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  /* ── Burger menu ── */
-  const burger = document.getElementById('burger');
-  const navLinks = document.getElementById('navLinks');
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav__links--open');
-    burger.classList.toggle('nav__burger--open');
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
       navLinks.classList.remove('nav__links--open');
       burger.classList.remove('nav__burger--open');
+      burger.setAttribute('aria-expanded', 'false');
+    }));
+
+    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el));
+
+    const counterObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = Number(el.dataset.counter);
+      const suffix = el.dataset.suffix || '';
+      const start = performance.now();
+      const tick = now => {
+        const p = Math.min((now - start) / 1100, 1);
+        el.textContent = `${Math.round(target * (1 - Math.pow(1 - p, 3)))}${suffix}`;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterObserver.unobserve(el);
+    }), { threshold: .5 });
+    document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
+
+    const dot = document.getElementById('curDot');
+    const ring = document.getElementById('curRing');
+    let mx = -100, my = -100, rx = -100, ry = -100;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = `${mx}px`; dot.style.top = `${my}px`;
     });
-  });
-
-  /* ── Intersection Observer: reveal-up ── */
-  const revObs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        revObs.unobserve(e.target);
-      }
+    const follow = () => {
+      rx += (mx - rx) * .14; ry += (my - ry) * .14;
+      ring.style.left = `${rx}px`; ring.style.top = `${ry}px`;
+      requestAnimationFrame(follow);
+    };
+    if (matchMedia('(hover: hover)').matches) follow();
+    document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
 
-  document.querySelectorAll('.reveal-up').forEach((el, i) => {
-    // stagger siblings
-    el.style.transitionDelay = (0.1 * (i % 4)) + 's';
-    revObs.observe(el);
-  });
-
-  /* ── Counter animation ── */
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.counter, 10);
-    const suffix = el.dataset.suffix || '';
-    const duration = 1200;
-    const start = performance.now();
-    function update(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target) + suffix;
-      if (progress < 1) requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
-  }
-
-  const counterObs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        counterObs.unobserve(e.target);
-      }
+    document.querySelectorAll('[data-magnetic]').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        el.style.transform = `translate(${(e.clientX - rect.left - rect.width / 2) * .16}px, ${(e.clientY - rect.top - rect.height / 2) * .16}px)`;
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
     });
-  }, { threshold: 0.5 });
 
-  document.querySelectorAll('[data-counter]').forEach(el => counterObs.observe(el));
-
-  /* ── About SVG draw animation ── */
-  function initSvgDraw() {
-    const svgEl = document.querySelector('.about__diagram');
-    if (!svgEl) return;
-    const obs = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        svgEl.classList.add('visible');
-        obs.disconnect();
-      }
-    }, { threshold: 0.3 });
-    obs.observe(svgEl);
-  }
-  initSvgDraw();
-
-  /* ── Pricing card 3D tilt ── */
-  document.querySelectorAll('[data-tilt]').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width  - 0.5;
-      const y = (e.clientY - r.top)  / r.height - 0.5;
-      card.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(6px)`;
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!this.reportValidity()) return;
+      const button = this.querySelector('.contact__submit');
+      button.querySelector('.submit__text').textContent = '送信を受け付けました';
+      button.classList.add('is-sent');
+      button.disabled = true;
     });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) translateZ(0)';
-      card.style.transition = 'transform .5s cubic-bezier(.16,1,.3,1)';
-    });
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'transform .1s linear';
-    });
-  });
-
-  /* ── Magnetic buttons ── */
-  document.querySelectorAll('[data-magnetic]').forEach(el => {
-    el.addEventListener('mousemove', e => {
-      const r = el.getBoundingClientRect();
-      const cx = r.left + r.width / 2;
-      const cy = r.top  + r.height / 2;
-      const dx = (e.clientX - cx) * 0.28;
-      const dy = (e.clientY - cy) * 0.28;
-      el.style.transform = `translate(${dx}px, ${dy}px)`;
-    });
-    el.addEventListener('mouseleave', () => {
-      el.style.transform = '';
-      el.style.transition = 'transform .5s cubic-bezier(.16,1,.3,1)';
-    });
-    el.addEventListener('mouseenter', () => {
-      el.style.transition = 'transform .15s linear';
-    });
-  });
-
-  /* ── Hero mouse parallax ── */
-  const heroBg = document.querySelector('.hero__bg');
-  const heroImg = document.querySelector('.hero__image');
-  const heroSec = document.getElementById('hero');
-  let px = 0, py = 0, tx = 0, ty = 0;
-  heroSec.addEventListener('mousemove', e => {
-    tx = (e.clientX / window.innerWidth  - 0.5);
-    ty = (e.clientY / window.innerHeight - 0.5);
-  });
-  function animParallax() {
-    px = lerp(px, tx, 0.06);
-    py = lerp(py, ty, 0.06);
-    if (heroBg)  heroBg.style.transform  = `translate(${px * 18}px, ${py * 14}px)`;
-    if (heroImg) heroImg.style.transform = `translate(${px * -12}px, ${py * -10}px)`;
-    requestAnimationFrame(animParallax);
-  }
-  if (matchMedia('(hover:hover)').matches) animParallax();
-
-  /* ── Hero scroll depth (sink & fade) ── */
-  const heroContent = document.querySelector('.hero__content');
-  function heroDepth() {
-    const y = window.scrollY;
-    const h = window.innerHeight;
-    if (y < h && heroContent) {
-      const p = y / h;
-      heroContent.style.transform = `translateY(${y * 0.22}px)`;
-      heroContent.style.opacity = 1 - p * 1.1;
-    }
-  }
-
-  /* ── Back to top ── */
-  const toTop = document.getElementById('toTop');
-  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  function toTopVis() {
-    toTop.classList.toggle('to-top--visible', window.scrollY > window.innerHeight);
-  }
-  window.addEventListener('scroll', () => { heroDepth(); toTopVis(); }, { passive: true });
-
-  /* ── Contact form submit ── */
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('.contact__submit');
-    const text = btn.querySelector('.submit__text');
-    text.textContent = '送信しました ✓';
-    btn.style.background = '#6B7B6E';
-    btn.disabled = true;
-  });
-
-})();
-</script>
+  })();
+  </script>
 </body>
 </html>
+
