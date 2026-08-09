@@ -199,6 +199,10 @@ body.cursor-hover .cur-ring{width:66px;height:66px}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brass)}
 .contact__form-bottom{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;margin-top:20px}
 .contact__form-bottom p{font-size:10px;color:rgba(255,255,255,.5)}
+.contact__info{display:flex;flex-direction:column;gap:14px}
+.contact__email{display:inline-flex;align-items:center;gap:8px;font-size:14px;letter-spacing:.02em;color:var(--brass);transition:color .25s}
+.contact__email:hover{color:#fff}
+.contact__email svg{flex-shrink:0}
 .contact__submit{width:160px;height:160px;border-radius:50%;background:var(--signal);color:#fff;display:flex;align-items:center;justify-content:center;gap:18px;font-size:13px;font-weight:600;transition:background .3s,transform .3s var(--ease)}
 .contact__submit:hover{background:var(--paper);color:var(--ink)}
 .contact__submit.is-sent{width:210px;border-radius:0;background:var(--brass);color:var(--ink)}

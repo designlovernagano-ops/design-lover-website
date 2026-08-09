@@ -175,7 +175,7 @@
         <div class="field field--half"><label for="c-email">メールアドレス <span>*</span></label><input type="email" id="c-email" name="email" autocomplete="email" required></div>
         <div class="field field--half"><label for="c-type">ご相談内容 <span>*</span></label><select id="c-type" name="type" required><option value="" selected disabled>選択してください</option><option>治具・装置設計</option><option>3Dプリンター造形</option><option>CADオペレーティング</option><option>継続サポート</option><option>Webサイト制作</option><option>AI導入支援</option><option>GAS・業務自動化</option><option>その他</option></select></div>
         <div class="field"><label for="c-msg">メッセージ <span>*</span></label><textarea id="c-msg" name="message" rows="5" required></textarea></div>
-        <div class="contact__form-bottom"><p>NAGANO, JAPAN<br>通常24時間以内に返信します</p><button type="submit" class="contact__submit" data-magnetic><span class="submit__text">送信する</span><span>↗</span></button></div>
+        <div class="contact__form-bottom"><div class="contact__info"><p>NAGANO, JAPAN<br>通常24時間以内に返信します</p><a class="contact__email" id="contactEmail" data-user="design.lover.nagano" data-domain="gmail.com" aria-label="メールで問い合わせる"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1.5 4l6.5 5 6.5-5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg><span class="contact__email-text">メールでのお問い合わせ</span></a></div><button type="submit" class="contact__submit" data-magnetic><span class="submit__text">送信する</span><span>↗</span></button></div>
       </form>
     </section>
   </main>
@@ -275,6 +275,14 @@
       });
       el.addEventListener('mouseleave', () => { el.style.transform = ''; });
     });
+
+    // メールアドレスをbotに拾われないようJSで組み立てる
+    const emailEl = document.getElementById('contactEmail');
+    if (emailEl) {
+      const addr = emailEl.dataset.user + '@' + emailEl.dataset.domain;
+      emailEl.href = 'mailto:' + addr + '?subject=' + encodeURIComponent('Design Lover へのお問い合わせ');
+      emailEl.querySelector('.contact__email-text').textContent = addr;
+    }
 
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
