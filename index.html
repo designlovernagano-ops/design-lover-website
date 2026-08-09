@@ -287,10 +287,24 @@
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       if (!this.reportValidity()) return;
+      const v = id => (this.querySelector('#' + id) || {}).value || '';
+      const to = (emailEl ? emailEl.dataset.user + '@' + emailEl.dataset.domain : '');
+      const subject = '【お問い合わせ】' + (v('c-type') || 'ご相談') + ' / ' + (v('c-name') || '');
+      const body =
+        'お名前：' + v('c-name') + '\n' +
+        '会社名・屋号：' + v('c-company') + '\n' +
+        'メールアドレス：' + v('c-email') + '\n' +
+        'ご相談内容：' + v('c-type') + '\n' +
+        '------------------------------\n' +
+        v('c-msg') + '\n';
+      const mailto = 'mailto:' + to +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+      window.location.href = mailto;
+
       const button = this.querySelector('.contact__submit');
-      button.querySelector('.submit__text').textContent = '送信を受け付けました';
+      button.querySelector('.submit__text').textContent = 'メールを起動しました';
       button.classList.add('is-sent');
-      button.disabled = true;
     });
   })();
   </script>
