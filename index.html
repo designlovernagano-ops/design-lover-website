@@ -169,14 +169,17 @@
         <h2 class="contact__title reveal-up">あなたの課題を、<br><em>聞かせてください。</em></h2>
         <p class="contact__lead reveal-up">まだ仕様が決まっていなくても大丈夫です。<br>小さな相談から、お気軽にご連絡ください。</p>
       </div>
-      <form class="contact__form reveal-up" id="contactForm" novalidate>
-        <div class="field field--half"><label for="c-name">お名前 <span>*</span></label><input type="text" id="c-name" name="name" autocomplete="name" required></div>
-        <div class="field field--half"><label for="c-company">会社名・屋号</label><input type="text" id="c-company" name="company" autocomplete="organization"></div>
-        <div class="field field--half"><label for="c-email">メールアドレス <span>*</span></label><input type="email" id="c-email" name="email" autocomplete="email" required></div>
-        <div class="field field--half"><label for="c-type">ご相談内容 <span>*</span></label><select id="c-type" name="type" required><option value="" selected disabled>選択してください</option><option>治具・装置設計</option><option>3Dプリンター造形</option><option>CADオペレーティング</option><option>継続サポート</option><option>Webサイト制作</option><option>AI導入支援</option><option>GAS・業務自動化</option><option>その他</option></select></div>
-        <div class="field"><label for="c-msg">メッセージ <span>*</span></label><textarea id="c-msg" name="message" rows="5" required></textarea></div>
-        <div class="contact__form-bottom"><div class="contact__info"><p>NAGANO, JAPAN<br>通常24時間以内に返信します</p><a class="contact__email" id="contactEmail" data-user="design.lover.nagano" data-domain="gmail.com" aria-label="メールで問い合わせる"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1.5 4l6.5 5 6.5-5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg><span class="contact__email-text">メールでのお問い合わせ</span></a></div><button type="submit" class="contact__submit" data-magnetic><span class="submit__text">送信する</span><span>↗</span></button></div>
-      </form>
+      <div class="contact__cta reveal-up">
+        <a class="contact__mail" id="contactEmail" data-user="design.lover.nagano" data-domain="gmail.com" aria-label="メールで問い合わせる">
+          <span class="contact__mail-head">
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1.5 4l6.5 5 6.5-5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+            <span>メールでお問い合わせ</span>
+          </span>
+          <span class="contact__email-text contact__mail-addr">メールアドレスを表示</span>
+          <span class="contact__mail-arrow" aria-hidden="true">↗</span>
+        </a>
+        <p class="contact__note">NAGANO, JAPAN　—　通常24時間以内に返信します</p>
+      </div>
     </section>
   </main>
 
@@ -283,29 +286,6 @@
       emailEl.href = 'mailto:' + addr + '?subject=' + encodeURIComponent('Design Lover へのお問い合わせ');
       emailEl.querySelector('.contact__email-text').textContent = addr;
     }
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      if (!this.reportValidity()) return;
-      const v = id => (this.querySelector('#' + id) || {}).value || '';
-      const to = (emailEl ? emailEl.dataset.user + '@' + emailEl.dataset.domain : '');
-      const subject = '【お問い合わせ】' + (v('c-type') || 'ご相談') + ' / ' + (v('c-name') || '');
-      const body =
-        'お名前：' + v('c-name') + '\n' +
-        '会社名・屋号：' + v('c-company') + '\n' +
-        'メールアドレス：' + v('c-email') + '\n' +
-        'ご相談内容：' + v('c-type') + '\n' +
-        '------------------------------\n' +
-        v('c-msg') + '\n';
-      const mailto = 'mailto:' + to +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
-      window.location.href = mailto;
-
-      const button = this.querySelector('.contact__submit');
-      button.querySelector('.submit__text').textContent = 'メールを起動しました';
-      button.classList.add('is-sent');
-    });
   })();
   </script>
 </body>

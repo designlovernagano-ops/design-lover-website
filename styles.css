@@ -189,25 +189,16 @@ body.cursor-hover .cur-ring{width:66px;height:66px}
 .contact__title{font-family:var(--serif);font-size:68px;font-weight:500;line-height:1.5;margin-top:90px}
 .contact__title em{font-style:normal;color:var(--brass)}
 .contact__lead{font-family:var(--serif);font-size:15px;line-height:2.1;margin-top:40px;color:rgba(255,255,255,.62)}
-.contact__form{align-self:end;display:grid;grid-template-columns:repeat(2,1fr);gap:28px 24px}
-.field{grid-column:1/-1}
-.field--half{grid-column:auto}
-.field label{display:block;font-size:11px;color:rgba(255,255,255,.72);margin-bottom:8px}
-.field label span{color:var(--signal)}
-.field input,.field select,.field textarea{width:100%;border:0;border-bottom:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;padding:12px 2px;outline:0;border-radius:0;transition:border-color .25s}
-.field select option{color:#171816;background:#fff}
-.field select option:first-child{color:#73736d}
-.field textarea{resize:vertical;min-height:130px}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brass)}
-.contact__form-bottom{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;margin-top:20px}
-.contact__form-bottom p{font-size:10px;color:rgba(255,255,255,.5)}
-.contact__info{display:flex;flex-direction:column;gap:14px}
-.contact__email{display:inline-flex;align-items:center;gap:8px;font-size:14px;letter-spacing:.02em;color:var(--brass);transition:color .25s}
-.contact__email:hover{color:#fff}
-.contact__email svg{flex-shrink:0}
-.contact__submit{width:160px;height:160px;border-radius:50%;background:var(--signal);color:#fff;display:flex;align-items:center;justify-content:center;gap:18px;font-size:13px;font-weight:600;transition:background .3s,transform .3s var(--ease)}
-.contact__submit:hover{background:var(--paper);color:var(--ink)}
-.contact__submit.is-sent{width:210px;border-radius:0;background:var(--brass);color:var(--ink)}
+.contact__cta{align-self:end;display:flex;flex-direction:column;gap:28px}
+.contact__mail{display:block;border:1px solid rgba(255,255,255,.22);border-radius:4px;padding:40px 44px;position:relative;transition:border-color .3s,background .3s}
+.contact__mail:hover{border-color:var(--brass);background:rgba(185,160,110,.06)}
+.contact__mail-head{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.62)}
+.contact__mail-head svg{color:var(--brass)}
+.contact__mail-addr{display:block;margin-top:16px;font-size:28px;font-weight:500;letter-spacing:.01em;color:#fff;word-break:break-all;transition:color .3s}
+.contact__mail:hover .contact__mail-addr{color:var(--brass)}
+.contact__mail-arrow{position:absolute;top:28px;right:32px;font-size:22px;color:var(--brass);transition:transform .3s var(--ease)}
+.contact__mail:hover .contact__mail-arrow{transform:translate(4px,-4px)}
+.contact__note{font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.5)}
 .footer{background:#10110f;color:var(--paper);padding:90px var(--pad) 28px}
 .footer__top{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:90px}
 .footer__top>p{font-family:var(--serif);font-size:52px;line-height:1.4}
@@ -335,10 +326,9 @@ body.cursor-hover .cur-ring{width:66px;height:66px}
   .voice p{font-size:20px}
   .contact{display:block}
   .contact__title{font-size:38px}
-  .contact__form{grid-template-columns:1fr;margin-top:70px}
-  .field--half{grid-column:1/-1}
-  .contact__form-bottom{align-items:flex-end}
-  .contact__submit{width:118px;height:118px}
+  .contact__cta{margin-top:60px}
+  .contact__mail{padding:32px 28px}
+  .contact__mail-addr{font-size:22px}
   .footer{padding-top:70px}
   .footer__top{display:block;padding-bottom:60px}
   .footer__top>p{font-size:40px}
