@@ -28,7 +28,7 @@ ul,ol{list-style:none}
 ::selection{background:var(--signal);color:#fff}
 .loader{position:fixed;inset:0;z-index:10000;display:grid;place-content:center;gap:24px;background:var(--ink);color:var(--paper);text-align:center;transition:opacity .7s var(--ease),visibility .7s}
 .loader.done{opacity:0;visibility:hidden;pointer-events:none}
-.loader__mark{display:flex;width:108px;height:108px;margin:auto;padding:22px;background:var(--paper);border:1px solid var(--brass);align-items:center;justify-content:center;box-shadow:0 14px 44px rgba(0,0,0,.4);animation:loaderMark .8s var(--ease) both}
+.loader__mark{display:flex;width:108px;height:108px;margin:auto;padding:22px;background:#fff;border:1px solid var(--brass);align-items:center;justify-content:center;box-shadow:0 14px 44px rgba(0,0,0,.4);animation:loaderMark .8s var(--ease) both}
 .loader__mark img{width:100%;height:100%;object-fit:contain}
 @keyframes loaderMark{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .loader p{font-size:11px;font-weight:600}
