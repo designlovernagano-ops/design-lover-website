@@ -181,8 +181,9 @@ body.cursor-hover .cur-ring{width:66px;height:66px}
 .voice:nth-child(2){grid-column:7/12;margin-top:150px}
 .voice:nth-child(3){grid-column:3/9;margin-top:50px}
 .voice p{font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.9}
-.voice footer{display:flex;gap:16px;margin-top:28px;font-size:11px}
-.voice footer span+span{opacity:.65}
+.voice footer{display:flex;gap:16px;margin-top:32px;font-size:15px;letter-spacing:.02em}
+.voice footer span:first-child{font-weight:600}
+.voice footer span+span{opacity:.7}
 .contact{background:var(--ink-2);color:var(--paper);display:grid;grid-template-columns:minmax(400px,.8fr) minmax(560px,1.2fr);gap:100px}
 .contact__header{min-width:0}
 .contact__title{font-family:var(--serif);font-size:68px;font-weight:500;line-height:1.5;margin-top:90px}
