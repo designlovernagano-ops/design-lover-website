@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Design LoverのWebサイト制作・運用の料金案内。制作費・月額管理プラン・都度更新の目安をまとめています。長野県宮田村の設計事務所が、伝わって問い合わせにつながるサイトをつくります。">
+  <meta name="theme-color" content="#171816">
+  <title>Web制作の料金 | Design Lover</title>
+  <link rel="icon" href="logo-mark-crop.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Shippori+Mincho:wght@500;600&family=DM+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Web制作 料金ページ — 本編サイト(Design Lover)の配色・書体に合わせた独立ページ */
+    :root{
+      --paper:#f3f0e8;
+      --surface:#ffffff;
+      --surface-2:#f6f3eb;
+      --ink:#1b1c19;
+      --muted:#5f615a;
+      --signal:#b2412c;
+      --brass:#9a7b45;
+      --brass-soft:#c5ae80;
+      --line:rgba(27,28,25,.14);
+      --line-strong:rgba(27,28,25,.26);
+      --serif:'Shippori Mincho','Yu Mincho',serif;
+      --display:'DM Serif Display',Georgia,serif;
+      --sans:'DM Sans','Noto Sans JP',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.85;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{color:inherit}
+
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px clamp(18px,5vw,40px);border-bottom:1px solid var(--line);position:sticky;top:0;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);z-index:10}
+    .topbar__brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:1.15rem;letter-spacing:.02em}
+    .topbar__brand img{width:34px;height:42px;object-fit:contain}
+    .topbar__back{font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--muted);display:inline-flex;gap:8px;align-items:center;transition:color .2s}
+    .topbar__back:hover{color:var(--signal)}
+
+    .wrap{max-width:960px;margin:0 auto;padding-block:clamp(36px,6vw,72px);padding-left:clamp(18px,5vw,40px);padding-right:clamp(18px,5vw,40px)}
+
+    .mast{border-bottom:1px solid var(--line-strong);padding-bottom:clamp(24px,4vw,38px);margin-bottom:clamp(36px,6vw,58px)}
+    .mast__label{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--brass)}
+    .mast h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,5.4vw,3.1rem);letter-spacing:-.02em;line-height:1.4;margin:18px 0 0;text-wrap:balance}
+    .mast h1 em{font-style:normal;color:var(--signal)}
+    .mast p{max-width:42em;margin:18px 0 0;color:var(--muted);font-size:.98rem}
+
+    .sec{margin-top:clamp(42px,7vw,74px)}
+    .eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .eyebrow__num{font-family:var(--display);font-size:1.15rem;color:var(--signal);line-height:1}
+    .eyebrow__txt{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+    .eyebrow__rule{flex:1;height:1px;background:var(--line)}
+    .sec__title{font-family:var(--serif);font-weight:600;font-size:clamp(1.35rem,3.4vw,1.9rem);letter-spacing:-.01em;margin:0 0 6px}
+    .sec__note{color:var(--muted);font-size:.92rem;margin:0 0 28px}
+
+    .rows{display:flex;flex-direction:column;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+    .row{display:grid;grid-template-columns:1fr auto;gap:10px 24px;align-items:baseline;background:var(--surface);padding:22px clamp(18px,3vw,30px)}
+    .row__main{min-width:0}
+    .row__name{font-family:var(--serif);font-weight:600;font-size:1.18rem;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .row__desc{color:var(--muted);font-size:.9rem;margin-top:4px}
+    .row__price{font-family:var(--display);font-size:clamp(1.4rem,3.4vw,1.85rem);white-space:nowrap;font-variant-numeric:tabular-nums}
+    .row__price span{font-family:var(--sans);font-size:.82rem;font-weight:500;color:var(--muted);margin-left:3px}
+    .tag{font-family:var(--sans);font-size:.64rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);border:1px solid var(--signal);border-radius:999px;padding:3px 10px;line-height:1.3}
+
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .plan{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:26px clamp(18px,2.4vw,24px);display:flex;flex-direction:column;position:relative}
+    .plan--feature{border-color:var(--brass-soft);box-shadow:0 10px 34px rgba(27,28,25,.09)}
+    .plan__flag{position:absolute;top:-11px;left:24px;background:var(--brass);color:#fff;font-size:.64rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+    .plan__name{font-size:.76rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+    .plan__price{font-family:var(--display);font-size:clamp(1.7rem,4vw,2.1rem);margin-top:12px;line-height:1;font-variant-numeric:tabular-nums}
+    .plan__price span{font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--muted)}
+    .plan__line{height:1px;background:var(--line);margin:20px 0}
+    .plan__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;font-size:.9rem}
+    .plan__list li{display:grid;grid-template-columns:16px 1fr;gap:10px;align-items:start}
+    .plan__list li::before{content:"";width:7px;height:7px;margin-top:9px;border-radius:50%;background:var(--brass-soft)}
+    .plan--feature .plan__list li::before{background:var(--signal)}
+
+    .spot{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .spot__card{background:var(--surface-2);border:1px solid var(--line);border-radius:4px;padding:22px clamp(18px,2.6vw,26px)}
+    .spot__card h3{font-family:var(--serif);font-weight:600;font-size:1.05rem;margin:0}
+    .spot__card .p{font-family:var(--display);font-size:1.4rem;margin:10px 0 4px;font-variant-numeric:tabular-nums}
+    .spot__card .p span{font-family:var(--sans);font-size:.8rem;color:var(--muted);font-weight:500}
+    .spot__card .d{color:var(--muted);font-size:.86rem;margin:0}
+
+    .notes{margin-top:18px;border-top:1px solid var(--line);padding-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px 32px;padding-left:0}
+    .notes li{list-style:none;display:grid;grid-template-columns:14px 1fr;gap:10px;color:var(--muted);font-size:.84rem;line-height:1.7}
+    .notes li::before{content:"—";color:var(--brass)}
+
+    .cta{margin-top:clamp(42px,7vw,68px);background:var(--surface);border:1px solid var(--line-strong);border-radius:4px;padding:clamp(26px,4vw,40px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+    .cta__h{font-family:var(--serif);font-weight:600;font-size:clamp(1.2rem,3vw,1.6rem);margin:0;letter-spacing:-.01em}
+    .cta__h em{font-style:normal;color:var(--signal)}
+    .cta__sub{color:var(--muted);font-size:.9rem;margin:8px 0 0}
+    .cta__actions{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+    .cta__btn{display:inline-flex;align-items:center;gap:12px;background:var(--signal);color:#fff;font-weight:600;font-size:.9rem;letter-spacing:.02em;padding:13px 24px;border-radius:3px;transition:background .2s}
+    .cta__btn:hover{background:#9a3522}
+    .cta__mail{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .cta__mail code{font-family:var(--sans);font-size:.98rem;font-weight:500;background:var(--surface-2);border:1px solid var(--line);border-radius:3px;padding:7px 12px;user-select:all}
+    .copy{font-family:var(--sans);font-size:.76rem;font-weight:600;color:var(--signal);background:none;border:1px solid var(--signal);border-radius:3px;padding:8px 14px;cursor:pointer;transition:background .2s,color .2s}
+    .copy:hover{background:var(--signal);color:#fff}
+    .copy.done{border-color:var(--brass);color:var(--brass)}
+
+    .foot{margin-top:40px;text-align:center;color:var(--muted);font-size:.74rem;letter-spacing:.04em}
+    .foot a{color:var(--signal);font-weight:600}
+
+    @media (max-width:760px){
+      .plans{grid-template-columns:1fr}
+      .spot{grid-template-columns:1fr}
+      .notes{grid-template-columns:1fr}
+      .plan--feature{order:-1}
+    }
+    @media (max-width:520px){
+      .row{grid-template-columns:1fr;gap:6px}
+      .row__price{justify-self:start}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="topbar__brand" href="index.html" aria-label="Design Lover トップへ">
+      <img src="logo-mark-crop.png" alt="">Design Lover
+    </a>
+    <a class="topbar__back" href="index.html"><span aria-hidden="true">←</span> サイトに戻る</a>
+  </div>
+
+  <div class="wrap">
+    <header class="mast">
+      <p class="mast__label">Web Production — 料金案内</p>
+      <h1>Webサイト制作・運用の<br><em>料金のご案内</em></h1>
+      <p>設計の現場で培った「使う人の視点」で、伝わって、問い合わせにつながるサイトをつくります。制作して終わりではなく、公開後の運用まで一緒に。料金は「①制作費」「②月額の管理」「③その都度の更新」の3つで構成しています。</p>
+    </header>
+
+    <section class="sec">
+      <div class="eyebrow"><span class="eyebrow__num">01</span><span class="eyebrow__txt">Build — 初期制作費</span><span class="eyebrow__rule"></span></div>
+      <h2 class="sec__title">つくるときに、一度だけ。</h2>
+      <p class="sec__note">ご要望を伺い、構成から文章・デザイン・公開設定までを担当します。見積もり前のご相談は無料です。</p>
+      <div class="rows">
+        <div class="row">
+          <div class="row__main">
+            <div class="row__name">ランディングページ</div>
+            <div class="row__desc">1ページ完結型。サービス紹介・キャンペーン・名刺代わりのページに。</div>
+          </div>
+          <div class="row__price">¥80,000<span>〜</span></div>
+        </div>
+        <div class="row">
+          <div class="row__main">
+            <div class="row__name">スタンダードサイト <span class="tag">人気</span></div>
+            <div class="row__desc">トップ＋複数セクションの本格的なサイト。会社・事業の顔として長く使えます。</div>
+          </div>
+          <div class="row__price">¥180,000<span>〜</span></div>
+        </div>
+        <div class="row">
+          <div class="row__main">
+            <div class="row__name">大規模・特殊要件</div>
+            <div class="row__desc">ページ数が多い、予約・EC・独自機能が必要な場合。内容に応じて個別に。</div>
+          </div>
+          <div class="row__price">別途お見積もり</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="eyebrow"><span class="eyebrow__num">02</span><span class="eyebrow__txt">Care — 月額管理プラン</span><span class="eyebrow__rule"></span></div>
+      <h2 class="sec__title">公開したあとを、支えます。</h2>
+      <p class="sec__note">ドメインやSSLの維持、不具合への対応、内容の更新。「何かあったらすぐ頼める人がいる」安心をお届けします。</p>
+      <div class="plans">
+        <div class="plan">
+          <div class="plan__name">Light</div>
+          <div class="plan__price">¥3,000<span>/月</span></div>
+          <div class="plan__line"></div>
+          <ul class="plan__list">
+            <li>ドメイン・SSL・公開状態の維持管理</li>
+            <li>表示の死活監視</li>
+            <li>不具合発生時の復旧対応</li>
+            <li>内容の更新は都度ご依頼（③）</li>
+          </ul>
+        </div>
+        <div class="plan plan--feature">
+          <span class="plan__flag">おすすめ</span>
+          <div class="plan__name">Standard</div>
+          <div class="plan__price">¥5,000<span>〜8,000/月</span></div>
+          <div class="plan__line"></div>
+          <ul class="plan__list">
+            <li>Lightのすべて</li>
+            <li>月1回までの軽微な更新</li>
+            <li>文章・画像の差し替え（1時間相当）</li>
+            <li>メールでのちょっとした相談</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <div class="plan__name">Support</div>
+          <div class="plan__price">¥10,000<span>〜/月</span></div>
+          <div class="plan__line"></div>
+          <ul class="plan__list">
+            <li>Standardのすべて</li>
+            <li>月数回の更新に対応</li>
+            <li>優先対応</li>
+            <li>運用・改善のご相談</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="eyebrow"><span class="eyebrow__num">03</span><span class="eyebrow__txt">Update — 都度の更新・追加</span><span class="eyebrow__rule"></span></div>
+      <h2 class="sec__title">管理プランの範囲を超えるとき。</h2>
+      <p class="sec__note">大きな変更や追加は、内容を確認してからお見積もりします。小さな更新だけ都度ご依頼いただくことも可能です。</p>
+      <div class="spot">
+        <div class="spot__card">
+          <h3>軽微な更新</h3>
+          <div class="p">¥3,000<span> 〜 / 回</span></div>
+          <p class="d">文章・画像の差し替えなど。時間制の場合は ¥5,000 / 時が目安です。</p>
+        </div>
+        <div class="spot__card">
+          <h3>ページ追加・大幅な改修</h3>
+          <div class="p">別途お見積もり</div>
+          <p class="d">新しいページの追加、構成の作り直しなど。規模に応じてご提案します。</p>
+        </div>
+      </div>
+      <ul class="notes">
+        <li>独自ドメインの取得・更新費（年1,500円前後）は実費のご負担となります。</li>
+        <li>サイト・ドメインの名義、解約時のデータの扱いは、ご契約時に取り決めます。</li>
+        <li>記載の価格はすべて税別です。</li>
+        <li>お見積もり・ご相談は無料。まずはお気軽にご連絡ください。</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h2 class="cta__h">まずは、<em>無料でご相談</em>から。</h2>
+        <p class="cta__sub">「これ、いくらでできる？」の一言からで大丈夫です。</p>
+      </div>
+      <div class="cta__actions">
+        <a class="cta__btn" href="mailto:design.lover.nagano@gmail.com?subject=Web%E5%88%B6%E4%BD%9C%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">メールで相談する <span aria-hidden="true">↗</span></a>
+        <div class="cta__mail">
+          <code id="mail">design.lover.nagano@gmail.com</code>
+          <button class="copy" id="copyBtn" type="button">コピー</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="foot"><a href="index.html">← Design Lover トップへ戻る</a> ／ 機械設計 × AI ・ 長野県宮田村</p>
+  </div>
+
+  <script>
+    (function(){
+      var btn=document.getElementById('copyBtn');
+      if(!btn)return;
+      var mailEl=document.getElementById('mail');
+      btn.addEventListener('click',function(){
+        function ok(){btn.textContent='コピーしました';btn.classList.add('done');setTimeout(function(){btn.textContent='コピー';btn.classList.remove('done');},1800);}
+        function select(){try{var r=document.createRange();r.selectNode(mailEl);var s=getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}ok();}
+        if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(mailEl.textContent).then(ok).catch(select);}else{select();}
+      });
+    })();
+  </script>
+</body>
+</html>

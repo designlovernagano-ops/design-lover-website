@@ -1,293 +1,186 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="長野の個人設計事務所 Design Lover。治具・装置設計、3Dプリンター造形、CAD業務で、つくりたいを実現します。">
-  <title>Design Lover | 長野の個人設計事務所</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Design Loverは長野県宮田村を拠点に、治具・装置設計、3Dモデル・図面作成、3Dプリント、中小企業のAI導入を支援します。設計歴7年の現場感覚で、思いを実際に使えるカタチに。">
+  <meta name="theme-color" content="#171816">
+  <title>Design Lover | 思いを、カタチに。機械設計 × AI導入支援</title>
+  <link rel="icon" href="logo-mark-crop.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260723">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260907-mobile">
+  <script src="site.js?v=20260907-mobile" defer></script>
 </head>
-<body class="is-loading">
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader__mark"><img src="logo-mark-crop.png" alt="Design Lover"></div>
-    <p>DESIGN LOVER</p>
-    <div class="loader__line"><span></span></div>
-  </div>
-  <div class="cur-dot" id="curDot"></div>
-  <div class="cur-ring" id="curRing"></div>
-  <div class="scroll-track" id="scrollTrack"></div>
-
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
   <header class="nav" id="nav">
     <a href="#hero" class="nav__logo" aria-label="Design Lover トップへ">
-      <img src="logo-mark-t.png" alt="" class="nav__logo-mark">
+      <img src="logo-mark-t.png" alt="" width="64" height="64" class="nav__logo-mark">
       <span class="nav__logo-word">DESIGN<br>LOVER</span>
     </a>
     <nav class="nav__links" id="navLinks" aria-label="メインナビゲーション">
-      <a href="#about"><span>01</span> 私たちについて</a>
-      <a href="#work"><span>02</span> できること</a>
-      <a href="#pricing"><span>03</span> 料金</a>
-      <a href="#contact" class="nav__contact">相談する</a>
+      <a href="#services">できること</a>
+      <a href="#about">Design Loverについて</a>
+      <a href="#process">ご依頼の流れ</a>
+      <a href="#contact" class="nav__contact">相談する <span aria-hidden="true">↗</span></a>
     </nav>
-    <button class="nav__burger" id="burger" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
+    <button class="nav__burger" id="burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="navLinks" hidden>
+      <span></span><span></span>
+    </button>
   </header>
 
-  <main>
-    <section class="hero" id="hero">
-      <div class="hero__media" aria-hidden="true"><img src="hero-engineering.png" alt=""></div>
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="hero__media" aria-hidden="true"><img src="hero-engineering.png" alt="" fetchpriority="high"></div>
       <div class="hero__shade" aria-hidden="true"></div>
-      <div class="hero__rail" aria-hidden="true"><span>35.658°N</span><span>NAGANO / JAPAN</span><span>137.900°E</span></div>
       <div class="hero__content">
-        <p class="hero__kicker">MECHANICAL DESIGN STUDIO / NAGANO</p>
-        <h1 class="hero__title"><span>設計の力で、</span><span><em>現場を前へ。</em></span></h1>
-        <div class="hero__bottom">
-          <p class="hero__lead">機械設計も、Web制作も、業務自動化も。<br>思いを、実際に使えるカタチにします。</p>
-          <a href="#contact" class="circle-link" data-magnetic><span>無料で<br>相談する</span><span class="circle-link__arrow">↗</span></a>
-        </div>
+        <p class="eyebrow hero__kicker"><span class="status-dot" aria-hidden="true"></span> MECHANICAL DESIGN × AI</p>
+        <h1 class="hero__title" id="heroTitle"><span>思いを、</span><br><span>カタチに。</span></h1>
+        <p class="hero__lead">つくりたいものがある。変えたい仕事がある。<br>設計の力と AI で、その一歩をともに。</p>
+        <a href="#services" class="text-link hero__link">Design Loverにできること <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="hero__brand" aria-hidden="true">DESIGN LOVER</div>
-      <a href="#intro" class="hero__scroll">SCROLL <span></span></a>
-    </section>
-
-    <section class="intro" id="intro">
-      <p class="intro__label reveal-up">OUR APPROACH</p>
-      <div class="intro__copy reveal-up"><p>機械も、業務も、</p><p>使う人まで考える。</p></div>
-      <p class="intro__body reveal-up">機械設計で培ったのは、条件を整理し、動くものに落とし込む力。この考え方を、Web制作やAI導入、業務自動化にも活かしています。</p>
-    </section>
-
-    <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>PRECISION INTO FORM</span><i>✳</i><span>PRECISION INTO FORM</span><i>✳</i><span>PRECISION INTO FORM</span><i>✳</i><span>PRECISION INTO FORM</span><i>✳</i></div></div>
-
-    <section class="about section" id="about">
-      <div class="section-index reveal-up"><span>01</span><span>ABOUT</span></div>
-      <div class="about__grid">
-        <div class="about__visual reveal-up">
-          <figure class="about__photo"><img src="about-photo.jpg" alt="Design Loverの設計デスク"></figure>
-          <p class="about__caption">WORKSPACE / NAGANO / JAPAN</p>
-        </div>
-        <div class="about__content">
-          <p class="about__role reveal-up">MECHANICAL DESIGNER × AI CONSULTANT</p>
-          <h2 class="about__title reveal-up">設計とは、<br>問いに答えを<br><em>刻む仕事だ。</em></h2>
-          <p class="about__body reveal-up">Design Loverは、長野を拠点に活動する「機械設計者 × AIコンサルタント」です。治具設計を専門に、装置設計・図面・3Dモデルを手がけてきました。現在はその現場感覚を活かし、AI導入支援やWebサイト制作、業務自動化にも取り組んでいます。</p>
-          <p class="about__body reveal-up">大きな組織より小さく動ける。だからこそ、あなたの課題に直接向き合えます。</p>
-          <div class="about__stats reveal-up">
-            <div><strong data-counter="50" data-suffix="+">0</strong><span>対応実績</span></div>
-            <div><strong data-counter="7" data-suffix="yr">0</strong><span>設計経験</span></div>
-            <div><strong data-counter="3" data-suffix="day">0</strong><span>最短納期</span></div>
-          </div>
-        </div>
+      <div class="hero__location"><span class="eyebrow">BASED IN NAGANO, JAPAN</span><span>長野県・宮田村から</span></div>
+      <div class="hero__footer">
+        <p>現場を知る設計者が、<br>あなたの「困った」に向き合います。</p>
+        <a href="#contact" class="circle-link"><span>まずは<br>相談する</span><span class="circle-link__arrow" aria-hidden="true">↗</span></a>
       </div>
-      <figure class="about__drawing reveal-up"><img src="about-drafting.jpg" alt="ドラフター上で治具のアイソメ組図を検討している様子"><figcaption>DESIGN PROCESS / DRAFTING &amp; CAD / NAGANO</figcaption></figure>
+      <span class="hero__brand" aria-hidden="true">Design Lover</span>
     </section>
 
-    <section class="work section" id="work">
-      <div class="work__head">
-        <div class="section-index section-index--light reveal-up"><span>02</span><span>SERVICES</span></div>
-        <h2 class="work__headline reveal-up">設計から試作まで、<br><em>ひとつながりで。</em></h2>
-      </div>
-      <article class="service reveal-up">
-        <div class="service__meta"><span>01</span><span>JIG &amp; DEVICE</span></div>
-        <div class="service__visual"><img src="service-jig.jpg" alt="CADモデルを確認しながら設計された検査治具"></div>
-        <div class="service__content"><h3>治具・装置設計</h3><p>検査治具、組立治具、省力化装置など。製造ラインの課題を構造から解決します。要件定義からCAD図面・3Dモデルまで一気通貫で対応します。</p></div>
-      </article>
-      <article class="service service--reverse reveal-up">
-        <div class="service__meta"><span>02</span><span>3D PRINT</span></div>
-        <div class="service__visual"><img src="service-3d-print.jpg" alt="3Dプリンターで機能部品を造形している様子"></div>
-        <div class="service__content"><h3>3Dプリンター造形</h3><p>スケッチや仕様書から3Dデータを起こし、試作品をお届けします。最短3日。アイデアを手で触れ、確かめられるカタチにします。</p></div>
-      </article>
-      <article class="service reveal-up">
-        <div class="service__meta"><span>03</span><span>CAD OPERATION</span></div>
-        <div class="service__visual"><img src="service-cad.jpg" alt="3D CADモデルと製作図を作成する設計デスク"></div>
-        <div class="service__content"><h3>CADオペレーティング</h3><p>SolidWorks・AutoCAD・Fusion 360に対応。手書き図面のCAD化、既存データの修正・整備、フォーマット変換などを承ります。</p></div>
-      </article>
-    </section>
+    <div class="expertise-bar" aria-label="専門分野と活動拠点">
+      <p><span class="expertise-bar__label">EXPERIENCE</span><span class="expertise-bar__value">機械設計歴 <strong>7</strong> 年</span></p>
+      <p><span class="expertise-bar__label">SPECIALTY</span><span class="expertise-bar__value">治具・装置設計</span></p>
+      <p><span class="expertise-bar__label">APPROACH</span><span class="expertise-bar__value">現場の視点 × AI活用</span></p>
+    </div>
 
-    <section class="digital section" id="digital">
-      <div class="digital__media" aria-hidden="true"><img src="digital-studio.png" alt=""></div>
-      <div class="digital__shade" aria-hidden="true"></div>
-      <div class="digital__inner">
-        <div class="section-index section-index--light reveal-up"><span>03</span><span>AI / WEB / AUTOMATION</span></div>
-        <p class="digital__kicker reveal-up">MECHANICAL DESIGN × AI</p>
-        <h2 class="digital__title reveal-up">図面だけでなく、<br><em>業務の流れも設計する。</em></h2>
-        <p class="digital__lead reveal-up">AIは、入れただけでは役に立ちません。現場で何に困っているかを聞き、使う人が迷わない形まで落とし込む。機械設計で続けてきた仕事と、考え方は同じです。</p>
-        <div class="digital__services">
-          <article class="digital-service reveal-up">
-            <div><span>01</span><p>WEB DESIGN</p></div>
-            <h3>AIを活用した<br>Webサイト制作</h3>
-            <p>事業の強みと言葉を整理し、AIと協働して制作します。見た目だけで終わらせず、問い合わせまでの流れを組み立てます。</p>
-          </article>
-          <article class="digital-service reveal-up">
-            <div><span>02</span><p>AI SUPPORT</p></div>
-            <h3>中小企業向け<br>AI導入支援</h3>
-            <p>何から試すか。どの情報を扱うか。経営者・管理職の方と、実務で無理なく使える範囲から一緒に決めていきます。</p>
-          </article>
-          <article class="digital-service reveal-up">
-            <div><span>03</span><p>AUTOMATION</p></div>
-            <h3>GAS・クラウドコード<br>業務自動化</h3>
-            <p>表計算や定型連絡などを自動化。画面共有で作る過程も見せるため、完成後がブラックボックスになりません。</p>
-          </article>
+    <section class="intro section">
+      <p class="section-label"><span>01</span> PHILOSOPHY</p>
+      <div class="intro__grid">
+        <h2>つくる、その先の<br><em>「役に立つ」まで。</em></h2>
+        <div class="intro__copy">
+          <p>図面ができたら終わり。ツールを入れたら終わり。<br class="desktop-break">それでは、現場の困りごとは解決しない。</p>
+          <p>誰が、どこで、どう使うのか。<br>機械設計で大切にしてきた視点を、AIの活用にも。<br>本当に必要なものを、一緒に考えるところから始めます。</p>
         </div>
       </div>
     </section>
-    <section class="process section" id="process">
-      <div class="section-index reveal-up"><span>04</span><span>PROCESS</span></div>
-      <div class="process__top"><h2 class="process__title reveal-up">相談から完成まで、<br>一貫して向き合います。</h2><p class="process__lead reveal-up">言葉になっていない課題でも構いません。目的と使われ方を整理し、最適な進め方をご提案します。</p></div>
+
+    <section class="services section" id="services" aria-labelledby="servicesTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-label"><span>02</span> WHAT I DO</p>
+          <h2 id="servicesTitle">ものづくりと、<br><em>仕事づくり。</em></h2>
+        </div>
+        <p class="section-heading__lead">設計の手が足りない企業の方も、<br>アイデアを実物にしたい個人の方も。<br>必要なところから、お手伝いします。</p>
+      </div>
+      <div class="service-category" id="work">
+        <p class="eyebrow">01 / ENGINEERING</p><h3>つくりたい、を動かす。</h3><span>機械設計・試作</span>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-card__image"><img src="service-jig.jpg" alt="治具とCADモデルのイメージ" loading="lazy" decoding="async"></div>
+          <div class="service-card__title"><span>01</span><h4>治具・装置設計</h4></div>
+          <p>作業を支える治具や装置を、用途や現場の条件から設計。設計者の手が足りない場面を支えます。</p>
+          <ul class="tags" aria-label="対応内容"><li>治具設計</li><li>装置設計</li><li>仕様の整理</li></ul>
+        </article>
+        <article class="service-card">
+          <div class="service-card__image"><img src="service-cad.jpg" alt="3Dモデルと製作図のイメージ" loading="lazy" decoding="async"></div>
+          <div class="service-card__title"><span>02</span><h4>3Dモデル・図面作成</h4></div>
+          <p>頭の中のイメージやスケッチを、検討できる3Dモデルや図面に。形状を整理する段階からご相談いただけます。</p>
+          <ul class="tags" aria-label="対応内容"><li>3Dモデリング</li><li>図面作成</li><li>データ修正</li></ul>
+        </article>
+        <article class="service-card">
+          <div class="service-card__image"><img src="service-3d-print.jpg" alt="3Dプリンターで部品を造形するイメージ" loading="lazy" decoding="async"></div>
+          <div class="service-card__title"><span>03</span><h4>3Dプリント・試作</h4></div>
+          <p>画面の中のアイデアを、手で触れて確かめられる形へ。形状や使い勝手を確認し、次の設計につなげます。</p>
+          <ul class="tags" aria-label="対応内容"><li>試作品</li><li>形状の確認</li><li>設計との連携</li></ul>
+        </article>
+      </div>
+      <p class="image-note">掲載画像はサービスのイメージです。</p>
+
+      <div class="digital" id="digital">
+        <div class="digital__intro">
+          <p class="eyebrow">02 / AI & DIGITAL</p>
+          <h3>いつもの仕事に、<br><em>新しいやり方を。</em></h3>
+          <p>「AIを使ってみたい。でも何から？」<br>そんな経営者・管理職の方へ。日々の業務を伺い、実務で使える方法を一緒に探します。</p>
+          <a href="#contact" class="text-link">AI活用について相談する <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="digital__list">
+          <article><span class="digital__number">01</span><div><h4>AI導入・活用支援</h4><p>困っている作業を整理し、AIに任せる範囲と、人が確認するポイントから考えます。</p></div></article>
+          <article><span class="digital__number">02</span><div><h4>AIを活用したWeb制作</h4><p>事業の強みを言葉にし、伝わるページへ。AIと協働して、情報と問い合わせの流れを組み立てます。</p><a href="web-pricing.html" class="text-link digital__link">Web制作の料金を見る <span aria-hidden="true">↗</span></a></div></article>
+          <article><span class="digital__number">03</span><div><h4>GASによる業務自動化 <span class="badge">準備中</span></h4><p>スプレッドシートなどの定型作業を対象に、作る過程も共有する支援を準備しています。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="aboutTitle">
+      <div class="about__visual">
+        <img src="about-photo.jpg" alt="設計デスクのイメージ" loading="lazy" decoding="async">
+        <p class="image-note">WORKSPACE IMAGE / DESIGN LOVER</p>
+        <div class="about__signature">Design Lover<span>Mechanical Designer & AI Consultant</span></div>
+      </div>
+      <div class="about__content">
+        <p class="section-label"><span>03</span> ABOUT</p>
+        <h2 id="aboutTitle">困ったときに、<br><em>思い出す存在へ。</em></h2>
+        <p>長野県上伊那郡宮田村を拠点に活動する、機械設計者 × AIコンサルタントです。設計歴は7年。治具設計を専門に、装置設計、図面作成、3Dモデリングに携わってきました。</p>
+        <p>「困っている中小企業の支えになりたい」。その思いが、Design Loverの出発点です。必要なものを見極めて、実際に使える形で届けることを大切にしています。</p>
+        <dl class="profile-details">
+          <div><dt>拠点</dt><dd>長野県上伊那郡宮田村</dd></div>
+          <div><dt>専門</dt><dd>治具設計・機械設計</dd></div>
+          <div><dt>大切にすること</dt><dd>使う人の視点、誠実な提案</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="principles section" aria-labelledby="principlesTitle">
+      <div class="principles__heading"><p class="eyebrow">MY COMMITMENT</p><h2 id="principlesTitle">小さな約束を、<br>大切に。</h2></div>
+      <div class="principles__list">
+        <article><span>01</span><h3>まず、困りごとを聞く。</h3><p>仕様が固まっていなくても大丈夫。何に困っているか、何ができるとうれしいか。そこから整理します。</p></article>
+        <article><span>02</span><h3>必要なものだけを提案する。</h3><p>つくる前に、もっと簡単な方法がないかを考える。目的に合わないものを、おすすめしません。</p></article>
+        <article><span>03</span><h3>できることを、誠実に。</h3><p>対応できる範囲を明確にし、難しいことは率直にお伝えする。安心して相談できる関係を目指します。</p></article>
+      </div>
+    </section>
+
+    <section class="process section" id="process" aria-labelledby="processTitle">
+      <div class="section-heading">
+        <div><p class="section-label"><span>04</span> HOW WE WORK</p><h2 id="processTitle">話すところから、<br><em>始めましょう。</em></h2></div>
+        <p class="section-heading__lead">図面1枚の相談から、業務の見直しまで。<br>目的に合わせて、進め方をご案内します。</p>
+      </div>
       <ol class="process__list">
-        <li class="reveal-up"><span>01</span><strong>聞く</strong><p>課題・用途・条件を整理</p></li>
-        <li class="reveal-up"><span>02</span><strong>考える</strong><p>構造と実現方法を検討</p></li>
-        <li class="reveal-up"><span>03</span><strong>設計する</strong><p>図面と3Dモデルを作成</p></li>
-        <li class="reveal-up"><span>04</span><strong>カタチにする</strong><p>試作・検証・納品まで</p></li>
+        <li><span>STEP 01</span><h3>ご相談</h3><p>困りごと、つくりたいもの、ご希望の時期をお聞かせください。</p></li>
+        <li><span>STEP 02</span><h3>ご提案・お見積もり</h3><p>対応範囲、納品物、費用、スケジュールを整理してご案内します。</p></li>
+        <li><span>STEP 03</span><h3>設計・制作</h3><p>内容にご納得いただいてから着手。必要な確認を重ねながら進めます。</p></li>
+        <li><span>STEP 04</span><h3>確認・お引き渡し</h3><p>合意した内容を一緒に確認し、図面・データ・制作物をお渡しします。</p></li>
       </ol>
-    </section>
-
-    <section class="pricing section" id="pricing">
-      <div class="section-index section-index--light reveal-up"><span>05</span><span>PRICING</span></div>
-      <div class="pricing__heading"><h2 class="pricing__title reveal-up">まずは、<br><em>話すところから。</em></h2><p class="pricing__intro reveal-up">見積もり・相談は無料です。内容や規模に合わせて、無理のない依頼方法をご案内します。</p></div>
-      <div class="pricing__list">
-        <article class="price-row reveal-up"><span class="price-row__num">01</span><div><p class="price-row__en">SPOT</p><h3>スポット相談</h3></div><p>初回相談、小さな修正、短時間のCAD作業など。「これ、できる？」から始められます。</p><strong>¥5,000<small>/h〜</small></strong></article>
-        <article class="price-row price-row--accent reveal-up"><span class="price-row__num">02</span><div><p class="price-row__en">PROJECT</p><h3>案件ごとの依頼</h3></div><p>治具・装置設計、3Dプリンター造形、CADデータ作成。内容に応じて個別にお見積もりします。</p><strong>お見積もり</strong></article>
-        <article class="price-row reveal-up"><span class="price-row__num">03</span><div><p class="price-row__en">RETAINER</p><h3>継続サポート</h3></div><p>設計リソースが足りない企業向け。月単位で設計業務を支援し、優先して対応します。</p><strong>¥30,000<small>/月〜</small></strong></article>
-        <article class="price-row reveal-up"><span class="price-row__num">04</span><div><p class="price-row__en">DIGITAL</p><h3>AI・Web・自動化</h3></div><p>Webサイト制作、AI導入支援、GAS・クラウドコードによる業務自動化。内容を伺って進め方をご提案します。</p><strong>お見積もり</strong></article>
-      </div>
-      <p class="pricing__tax">※価格は税抜き表示。内容により変動します。</p>
-    </section>
-
-    <section class="voices section" id="voices">
-      <div class="section-index reveal-up"><span>06</span><span>VOICES</span></div>
-      <h2 class="voices__title reveal-up">仕事の答えは、<br><em>使う人の声にある。</em></h2>
-      <div class="voices__list">
-        <blockquote class="voice reveal-up"><p>設計者の退職直後に依頼しました。品質が高く、工場からも太鼓判。頼れる外部の設計者ができた感覚です。</p><footer><span>M.T.</span><span>製造業・30名</span></footer></blockquote>
-        <blockquote class="voice reveal-up"><p>スケッチを送ったら3日で試作品が届いた。思っていたより遥かに精度が高くて驚きました。</p><footer><span>K.S.</span><span>個人・DIYクリエイター</span></footer></blockquote>
-        <blockquote class="voice reveal-up"><p>古い図面の整備とデータ変換をまとめて依頼。専門的な内容でも確認を挟みながら丁寧に進めてもらえました。</p><footer><span>A.N.</span><span>機械部品メーカー・15名</span></footer></blockquote>
+      <div class="estimate" id="pricing">
+        <div><p class="eyebrow">FEES & SCHEDULE</p><h3>費用と納期は、内容に合わせて。</h3></div>
+        <p>ご相談・お見積もりは無料です。<br>目的と必要な作業を伺い、個別にお見積もりします。</p>
+        <a href="#contact" aria-label="費用と納期を相談する"><span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
-    <section class="contact section" id="contact">
+    <section class="contact section" id="contact" aria-labelledby="contactTitle">
       <div class="contact__header">
-        <div class="section-index section-index--light reveal-up"><span>07</span><span>CONTACT</span></div>
-        <h2 class="contact__title reveal-up">あなたの課題を、<br><em>聞かせてください。</em></h2>
-        <p class="contact__lead reveal-up">まだ仕様が決まっていなくても大丈夫です。<br>小さな相談から、お気軽にご連絡ください。</p>
+        <p class="section-label"><span>05</span> LET'S TALK</p>
+        <h2 id="contactTitle">その「できるかな」を、<br><em>聞かせてください。</em></h2>
+        <p>まだうまく説明できなくても、構いません。<br>小さな困りごとから、お気軽にどうぞ。</p>
       </div>
-      <div class="contact__cta reveal-up">
-        <a class="contact__mail" id="contactEmail" data-user="design.lover.nagano" data-domain="gmail.com" aria-label="メールで問い合わせる">
-          <span class="contact__mail-head">
-            <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1.5 4l6.5 5 6.5-5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
-            <span>メールでお問い合わせ</span>
-          </span>
-          <span class="contact__email-text contact__mail-addr">メールアドレスを表示</span>
-          <span class="contact__mail-arrow" aria-hidden="true">↗</span>
+      <div class="contact__action">
+        <a class="contact__platform" href="https://coconala.com/users/4790717" target="_blank" rel="noopener noreferrer" aria-label="ココナラで相談する（新しいタブで開きます）"><span>ココナラで相談する</span><span aria-hidden="true">↗</span></a>
+        <a class="contact__mail" href="mailto:design.lover.nagano@gmail.com?subject=Design%20Lover%20%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
+          <span>メールで相談する</span><span aria-hidden="true">↗</span>
         </a>
-        <p class="contact__note">NAGANO, JAPAN　—　通常24時間以内に返信します</p>
+        <p class="contact__address">design.lover.nagano@gmail.com</p>
+        <p class="contact__hint">ご相談内容・ご希望の時期など、<br>分かる範囲でお書き添えください。</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__top"><p>思いを、<br><em>カタチに。</em></p><div class="footer__brand">DESIGN LOVER</div></div>
-    <div class="footer__bottom"><p>© 2026 DESIGN LOVER</p><nav aria-label="フッターナビ"><a href="#about">ABOUT</a><a href="#work">SERVICES</a><a href="#pricing">PRICING</a><a href="#contact">CONTACT</a></nav><a href="#hero">BACK TO TOP ↑</a></div>
+    <div class="footer__top"><a href="#hero" class="footer__brand" aria-label="Design Lover トップへ">Design Lover<span aria-hidden="true">.</span></a><p>思いを、カタチに。<br><span>MIYADA, NAGANO / JAPAN</span></p></div>
+    <div class="footer__bottom"><p>© 2026 Design Lover</p><nav aria-label="フッターナビゲーション"><a href="#services">できること</a><a href="#about">私について</a><a href="#contact">お問い合わせ</a></nav><a href="#hero">ページ上部へ ↑</a></div>
   </footer>
-
-  <script>
-  (() => {
-    'use strict';
-    const loader = document.getElementById('loader');
-    const hero = document.getElementById('hero');
-    let loaded = false;
-    const finishLoading = () => {
-      if (loaded) return;
-      loaded = true;
-      loader.classList.add('done');
-      document.body.classList.remove('is-loading');
-      requestAnimationFrame(() => hero.classList.add('animated'));
-    };
-    window.addEventListener('load', () => setTimeout(finishLoading, 900), { once: true });
-    setTimeout(finishLoading, 2500);
-
-    const nav = document.getElementById('nav');
-    const progress = document.getElementById('scrollTrack');
-    const heroMedia = document.querySelector('.hero__media img');
-    const onScroll = () => {
-      const y = window.scrollY;
-      nav.classList.toggle('nav--scrolled', y > 60);
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      progress.style.width = `${max > 0 ? y / max * 100 : 0}%`;
-      if (heroMedia && y < window.innerHeight) heroMedia.style.transform = `scale(1.06) translateY(${y * .06}px)`;
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('navLinks');
-    burger.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('nav__links--open');
-      burger.classList.toggle('nav__burger--open', open);
-      burger.setAttribute('aria-expanded', String(open));
-    });
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      navLinks.classList.remove('nav__links--open');
-      burger.classList.remove('nav__burger--open');
-      burger.setAttribute('aria-expanded', 'false');
-    }));
-
-    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
-    document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el));
-
-    const counterObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = Number(el.dataset.counter);
-      const suffix = el.dataset.suffix || '';
-      const start = performance.now();
-      const tick = now => {
-        const p = Math.min((now - start) / 1100, 1);
-        el.textContent = `${Math.round(target * (1 - Math.pow(1 - p, 3)))}${suffix}`;
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-      counterObserver.unobserve(el);
-    }), { threshold: .5 });
-    document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
-
-    const dot = document.getElementById('curDot');
-    const ring = document.getElementById('curRing');
-    let mx = -100, my = -100, rx = -100, ry = -100;
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = `${mx}px`; dot.style.top = `${my}px`;
-    });
-    const follow = () => {
-      rx += (mx - rx) * .14; ry += (my - ry) * .14;
-      ring.style.left = `${rx}px`; ring.style.top = `${ry}px`;
-      requestAnimationFrame(follow);
-    };
-    if (matchMedia('(hover: hover)').matches) follow();
-    document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-
-    document.querySelectorAll('[data-magnetic]').forEach(el => {
-      el.addEventListener('mousemove', e => {
-        const rect = el.getBoundingClientRect();
-        el.style.transform = `translate(${(e.clientX - rect.left - rect.width / 2) * .16}px, ${(e.clientY - rect.top - rect.height / 2) * .16}px)`;
-      });
-      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
-    });
-
-    // メールアドレスをbotに拾われないようJSで組み立てる
-    const emailEl = document.getElementById('contactEmail');
-    if (emailEl) {
-      const addr = emailEl.dataset.user + '@' + emailEl.dataset.domain;
-      emailEl.href = 'mailto:' + addr + '?subject=' + encodeURIComponent('Design Lover へのお問い合わせ');
-      emailEl.querySelector('.contact__email-text').textContent = addr;
-    }
-  })();
-  </script>
 </body>
 </html>
 
